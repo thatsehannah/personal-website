@@ -23,7 +23,7 @@ const Muses = (props) => {
           <Grid item>
             <Typography
               align="center"
-              variant="h2"
+              variant="h1"
               gutterBottom
               className={classes.title}
             >
