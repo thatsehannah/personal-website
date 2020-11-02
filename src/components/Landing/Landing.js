@@ -42,7 +42,7 @@ const Landing = () => {
           <Fade in={isPageLoaded} timeout={1000}>
             <Grid item>
               <Avatar
-                src="/assets/images/resumePhoto.jpg"
+                src="/assets/images/resumePhoto.jpeg"
                 classes={{ img: classes.image }}
                 className={classes.avatar}
               />

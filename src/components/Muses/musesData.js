@@ -23,7 +23,10 @@ export const muses = [
   },
   {
     title: "I ♥️ L.A.",
-    pic: { url: "/assets/images/overlook.jpg", title: "Overlook of Los Angeles" },
+    pic: {
+      url: "/assets/images/overlook.jpeg",
+      title: "Overlook of Los Angeles",
+    },
     description:
       'Besides the nice weather, the Lakers, landscape, etc., the main thing I love about L.A. is that it helped me culminate a new definition of "success". I have developed a different outlook on it since moving here and I am more determined to be successful in my career. Even though it is a bit expensive to live in L.A., it is definitely a place I can see myself my settling and raising a family.',
     fadeInDuration: 700,
@@ -37,7 +40,10 @@ export const muses = [
   },
   {
     title: "Music",
-    pic: { url: "/assets/images/music.jpeg", title: "Elliot holding a keyboard" },
+    pic: {
+      url: "/assets/images/music.jpeg",
+      title: "Elliot holding a keyboard",
+    },
     description:
       "Beat making has been a pasttime of mine for over 10 years now. I particularly love chopping up samples of older music and adding a new twist to it. Check out my Soundcloud to here some of my creations.",
     socialMedia: {
@@ -49,14 +55,17 @@ export const muses = [
   },
   {
     title: "Basketball",
-    pic: { url: "/assets/images/kobemjbron.jpg", title: "Kobe, MJ, Bron" },
+    pic: { url: "/assets/images/kobemjbron.jpeg", title: "Kobe, MJ, Bron" },
     description:
       "Basketball was my first love; I fell in love with it in 4th grade, and I've been a fan ever since. I enjoy watching it as well as playing it. I'm pretty good at it I would think but that's another conversation. Basketball taught me discipline and gave me confidence to strive to be the best at any and everything I do. Well since you asked, my top 5 favorite players of all-time are LeBron James, Michael Jordan, Allen Iverson, Shaq, and the late-great Kobe Bryant. Rest in peace Kobe & Gianna. Mamba Forever.",
     fadeInDuration: 1000,
   },
   {
     title: "Technology",
-    pic: { url: "/assets/images/tech.jpg", title: "Workstation with code on computer" },
+    pic: {
+      url: "/assets/images/tech.jpeg",
+      title: "Workstation with code on computer",
+    },
     description:
       "One of the biggest reasons why I wanted to become a developer is because of the ever-evolving capabilities of technology. Technology is without a doubt one of the most significant entities in our modern lives. I've always been attracted to how the IoT, such as computers and mobile phones, work behind the scenes. That solely drove me to learn how to code and want to continue to be hands-on with the growing world of tech.",
     fadeInDuration: 1100,

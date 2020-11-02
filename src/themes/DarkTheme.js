@@ -23,7 +23,7 @@ const theme = createMuiTheme({
       main: "#565151",
     },
     background: {
-      landing: "/assets/backgrounds/landingBgDark.jpg",
+      landing: "/assets/backgrounds/landingBgDark.jpeg",
     },
   },
   typography: {

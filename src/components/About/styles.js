@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   aboutSection: {
-    backgroundImage: `url("/assets/backgrounds/aboutBg.jpg")`,
+    backgroundImage: `url("/assets/backgrounds/aboutBg.jpeg")`,
     height: "80em",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -67,14 +67,13 @@ export const useStyles = makeStyles((theme) => ({
     color: theme.palette.type === "light" ? "#000" : "#fff",
     [theme.breakpoints.down("lg")]: {
       color: "#fff",
-      
     },
   },
   bornWord: {
     color: theme.palette.primary.main,
-    fontFamily: 'Archivo Black',
-    textTransform: 'uppercase',
-    fontSize: '1.5em',
+    fontFamily: "Archivo Black",
+    textTransform: "uppercase",
+    fontSize: "1.5em",
     [theme.breakpoints.down("lg")]: {
       color: "#d2be99",
     },
