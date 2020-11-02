@@ -78,7 +78,7 @@ const Landing = () => {
                 component={"a"}
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://pdfhost.io/v/qam2LVSpS_ElliotCHannahResume.pdf"
+                href="https://drive.google.com/file/d/1DuWfX38E44ZJvLNhpw2ieaUW6o16_QNa/view?usp=sharing"
               >
                 <DownloadIcon />
                 <span style={{ marginLeft: "0.5em" }}>Download My Résumé</span>
