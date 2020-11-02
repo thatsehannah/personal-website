@@ -36,7 +36,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   sectionTitle: {
     color: theme.palette.type === "light" ? "#000" : "#fff",
-    fontSize: '4em',
+    fontSize: "4em",
     [theme.breakpoints.down("lg")]: {
       color: "#fff",
     },
@@ -79,11 +79,19 @@ export const useStyles = makeStyles((theme) => ({
       color: "#d2be99",
     },
   },
-  contactConnect: {
+  contactEmailText: {
     textDecoration: "none",
     "&:hover": {
       color: theme.palette.primary.light,
       textDecoration: "underline",
+    },
+  },
+  contactPhoneText: {
+    [theme.breakpoints.down("md")]: {
+      "&:hover": {
+        color: theme.palette.primary.light,
+        textDecoration: "underline",
+      },
     },
   },
 }));

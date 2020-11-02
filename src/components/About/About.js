@@ -180,7 +180,7 @@ const About = (props) => {
                                       }
                                       className={[
                                         classes.contactText,
-                                        classes.contactConnect,
+                                        classes.contactPhoneText,
                                       ].join(" ")}
                                     >
                                       (706) 631-7005
@@ -203,7 +203,7 @@ const About = (props) => {
                                       target="_blank"
                                       className={[
                                         classes.contactText,
-                                        classes.contactConnect,
+                                        classes.contactEmailText,
                                       ].join(" ")}
                                     >
                                       elliotchannah@outlook.com
