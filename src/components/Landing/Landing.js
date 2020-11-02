@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactGA from "react-ga";
 
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -73,6 +74,12 @@ const Landing = () => {
           <Grid item>
             <Grid container justify={matchesSM ? "center" : undefined}>
               <Button
+                onClick={() =>
+                  ReactGA.event({
+                    category: "Resume",
+                    action: "Resume Downloaded",
+                  })
+                }
                 variant="contained"
                 className={classes.button}
                 component={"a"}

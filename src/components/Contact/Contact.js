@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LazyLoad from "react-lazyload";
+import ReactGA from 'react-ga'
 import axios from "axios";
 
 import { useTheme } from "@material-ui/core/styles";
@@ -77,6 +78,10 @@ const Contact = (props) => {
 
   const onSendMessage = () => {
     setLoading(true);
+    ReactGA.event({
+      category: 'Message',
+      action: "Message Sent"
+    })
     axios
       .get(
         "https://us-central1-personal-website-ehannah.cloudfunctions.net/sendMail",

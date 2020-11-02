@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import ReactGA from "react-ga";
 
 import Grid from "@material-ui/core/Grid";
 import { ThemeProvider } from "@material-ui/styles";
 
-import LightTheme from "../src/themes/LightTheme"
+import LightTheme from "../src/themes/LightTheme";
 import DarkTheme from "../src/themes/DarkTheme";
 import Header from "../src/containers/Header/Header";
 import Landing from "../src/components/Landing/Landing";
@@ -16,27 +17,36 @@ import ScrollUpButton from "../src/containers/ScrollUpButton/ScrollUpButton";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
+  const [pageVisited, setPageVisited] = useState(false);
 
   const toggleTheme = () => {
     if (theme === "light") {
-      localStorage.setItem("theme", "dark");
+      sessionStorage.setItem("theme", "dark");
       setTheme("dark");
     } else {
-      localStorage.setItem("theme", "light");
+      sessionStorage.setItem("theme", "light");
       setTheme("light");
     }
   };
 
   useEffect(() => {
-    const localTheme = localStorage.getItem("theme");
+    const sessionVisit = sessionStorage.getItem("pageVisited");
+    if (!sessionVisit) {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+      sessionStorage.setItem("pageVisited", new Date().getTime().toString())
+    }
+  });
+
+  useEffect(() => {
+    const localTheme = sessionStorage.getItem("theme");
 
     if (!localTheme) {
       const currentHour = new Date().getHours();
       if (currentHour >= 19 || currentHour <= 6) {
-        localStorage.setItem("theme", "dark");
+        sessionStorage.setItem("theme", "dark");
         setTheme("dark");
       } else {
-        localStorage.setItem("theme", "light");
+        sessionStorage.setItem("theme", "light");
         setTheme("light");
       }
     } else {

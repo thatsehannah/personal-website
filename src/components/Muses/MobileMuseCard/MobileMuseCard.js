@@ -85,7 +85,9 @@ const MobileMuseCard = (props) => {
                   muse.socialMedia.icon,
                   muse.socialMedia.link,
                   classes.icon,
-                  classes.iconButton
+                  classes.iconButton,
+                  muse.socialMedia.title,
+                  muse.socialMedia.type
                 )}
               </Grid>
             ) : null}

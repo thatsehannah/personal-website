@@ -1,5 +1,6 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
+import ReactGA from 'react-ga'
 import FadeIn from "react-lazyload-fadein";
 
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -239,6 +240,7 @@ const About = (props) => {
                           <Grid item>
                             <Grid container direction="column">
                               <SocialMedia
+                                location="About"
                                 size={[35, 40, 25]}
                                 color={
                                   matchesLG

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactGA from "react-ga";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -7,6 +8,8 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import createCache from "@emotion/cache";
 
 export const cache = createCache();
+
+ReactGA.initialize("UA-178789264-1");
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;

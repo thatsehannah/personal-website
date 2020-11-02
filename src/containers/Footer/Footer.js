@@ -36,6 +36,7 @@ const Footer = () => {
             </Grid>
             <Grid item style={{ margin: "1.5em 0" }}>
               <SocialMedia
+                location="Footer"
                 size={[30, 23, 23]}
                 color={theme.palette.primary.main}
               />

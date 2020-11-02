@@ -8,6 +8,8 @@ export const muses = [
     description:
       "Wilma is the true definition of 'a friend became the love of my life'. We were good friends throughout undergrad and started dating in 2016. Now we're engaged and are currently planning our wedding for Spring 2021. We do everything together from exploring different places around the city to sharing food while we watch television. She's extremely smart, a pleasure to be around, and has helped me improve in so many areas in my life.",
     socialMedia: {
+      type: 'Instagram',
+      title: 'Muse Fiancée',
       icon: SiInstagram,
       tooltip: "Wilma's Instagram page",
       link: "https://www.instagram.com/lavishbombs/",
@@ -48,6 +50,8 @@ export const muses = [
       "Beat making has been a pasttime of mine for over 10 years now. I particularly love chopping up samples of older music and adding a new twist to it. Check out my Soundcloud to here some of my creations.",
     socialMedia: {
       icon: SiSoundcloud,
+      title: 'Muse Music',
+      type: 'Soundcloud',
       tooltip: "My Soundcloud page",
       link: "https://soundcloud.com/thatsehannah/tracks",
     },

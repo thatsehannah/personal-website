@@ -16,26 +16,38 @@ const SocialMedia = (props) => {
 
   const socials = [
     {
+      title: props.location,
+      type: 'LinkedIn',
       icon: SiLinkedin,
       link: "https://www.linkedin.com/in/elliotchannahiii/",
     },
     {
+      title: props.location,
+      type: 'Github',
       icon: SiGithub,
       link: "https:///www.github.com/thatsehannah",
     },
     {
+      title: props.location,
+      type: 'Soundcloud',
       icon: SiSoundcloud,
       link: "https://soundcloud.com/thatsehannah/tracks",
     },
     {
+      title: props.location,
+      type: 'Facebook',
       icon: SiFacebook,
       link: "https:///wwww.facebook.com/ehannahiii",
     },
     {
+      title: props.location,
+      type: 'Instagram',
       icon: SiInstagram,
       link: "https://www.instagram.com/thatsehannah/",
     },
     {
+      title: props.location,
+      type: 'Cashapp',
       icon: SiCashapp,
       link: "https://cash.app/$thatsehannah/",
     },
@@ -48,7 +60,9 @@ const SocialMedia = (props) => {
           social.icon,
           social.link,
           classes.icon,
-          classes.button
+          classes.button,
+          social.title,
+          social.type
         )
       )}
     </Grid>

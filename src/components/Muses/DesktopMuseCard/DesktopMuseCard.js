@@ -61,7 +61,9 @@ const MuseCard = (props) => {
                       muse.socialMedia.icon,
                       muse.socialMedia.link,
                       classes.icon,
-                      classes.button
+                      classes.button,
+                      muse.socialMedia.title,
+                      muse.socialMedia.type
                     )}
                   </Tooltip>
                 </Grid>
