@@ -12,10 +12,11 @@ export const useStyles = makeStyles((theme) => ({
       height: "60em",
     },
     [theme.breakpoints.down("md")]: {
+      height: "90em",
       backgroundAttachment: "scroll",
     },
     [theme.breakpoints.down("xs")]: {
-      height: "40em",
+      height: "50em",
     },
   },
   intro: {
