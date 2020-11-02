@@ -39,7 +39,7 @@ const About = (props) => {
               <Grid container direction="column" alignItems="center">
                 <Grid item>
                   <Typography
-                    variant="h2"
+                    variant="h1"
                     align="center"
                     className={classes.sectionTitle}
                     gutterBottom
@@ -174,7 +174,14 @@ const About = (props) => {
                                   <Grid item>
                                     <Typography
                                       variant="body2"
-                                      className={classes.contactText}
+                                      component={matchesMD ? "a" : undefined}
+                                      href={
+                                        matchesMD ? "tel:7066317005" : undefined
+                                      }
+                                      className={[
+                                        classes.contactText,
+                                        classes.contactConnect,
+                                      ].join(" ")}
                                     >
                                       (706) 631-7005
                                     </Typography>
@@ -196,7 +203,7 @@ const About = (props) => {
                                       target="_blank"
                                       className={[
                                         classes.contactText,
-                                        classes.email,
+                                        classes.contactConnect,
                                       ].join(" ")}
                                     >
                                       elliotchannah@outlook.com

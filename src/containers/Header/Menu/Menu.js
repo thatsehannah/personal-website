@@ -24,14 +24,12 @@ const Menu = (props) => {
       <>
         <Grid container>
           <Grid item>
-            <Tooltip title="Close">
-              <IconButton
-                className={classes.closeIconButton}
-                onClick={() => props.setOpenMenu(false)}
-              >
-                <CloseIcon className={classes.closeIcon} />
-              </IconButton>
-            </Tooltip>
+            <IconButton
+              className={classes.closeIconButton}
+              onClick={() => props.setOpenMenu(false)}
+            >
+              <CloseIcon className={classes.closeIcon} />
+            </IconButton>
           </Grid>
         </Grid>
         <Grid

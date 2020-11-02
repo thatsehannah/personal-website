@@ -18,6 +18,7 @@ export const useStyles = makeStyles((theme) => ({
     marginBottom: "1em",
   },
   title: {
+    fontSize: '4em',
     color: theme.palette.type === "light" ? "#000" : "#fff",
     [theme.breakpoints.down("xs")]: {
       fontSize: "2.8em",

@@ -12,11 +12,15 @@ export const useStyles = makeStyles((theme) => ({
   button: {
     "&:hover": {
       backgroundColor: "transparent",
+      
     },
   },
   appBarIcon: {
     fontSize: "1.5em",
     color: theme.palette.primary.main,
+    "&:hover": {
+      color: theme.palette.primary.dark,
+    },
     [theme.breakpoints.down("md")]: {
       fontSize: "1.5em",
     },
@@ -24,5 +28,4 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: "1.2em",
     },
   },
-  
 }));

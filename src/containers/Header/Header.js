@@ -67,16 +67,14 @@ const Header = (props) => {
               justify="space-between"
             >
               <Grid item>
-                <Tooltip title="Menu">
-                  <IconButton
-                    className={classes.button}
-                    onClick={() => setOpenMenu(true)}
-                    disableRipple
-                    disableTouchRipple
-                  >
-                    <MenuIcon className={classes.appBarIcon} />
-                  </IconButton>
-                </Tooltip>
+                <IconButton
+                  className={classes.button}
+                  onClick={() => setOpenMenu(true)}
+                  disableRipple
+                  disableTouchRipple
+                >
+                  <MenuIcon className={classes.appBarIcon} />
+                </IconButton>
               </Grid>
               <Grid item>
                 <Tooltip title="Toggle light/dark mode">
