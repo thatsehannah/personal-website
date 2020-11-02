@@ -87,6 +87,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   contactPhoneText: {
+    textDecoration: 'none',
     [theme.breakpoints.down("md")]: {
       "&:hover": {
         color: theme.palette.primary.light,
