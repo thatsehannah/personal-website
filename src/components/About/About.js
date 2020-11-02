@@ -14,7 +14,6 @@ import EmailIcon from "@material-ui/icons/MailOutline";
 import BirthdayIcon from "@material-ui/icons/Cake";
 
 import SocialMedia from "../../containers/SocialMedia/SocialMedia";
-import aboutAvatar from "../../assets/images/wedding.jpeg";
 import { useStyles } from "./styles";
 
 const About = (props) => {
@@ -60,7 +59,7 @@ const About = (props) => {
                           <Grid onLoad={onload} item>
                             <Avatar
                               variant="rounded"
-                              src={aboutAvatar}
+                              src="/assets/images/wedding.jpeg"
                               className={classes.avatar}
                             />
                           </Grid>

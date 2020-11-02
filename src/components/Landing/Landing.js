@@ -10,7 +10,6 @@ import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import { useStyles } from "./styles";
-import ehannah from "../../assets/images/resumePhoto.jpg";
 
 const Landing = () => {
   const theme = useTheme();
@@ -43,7 +42,7 @@ const Landing = () => {
           <Fade in={isPageLoaded} timeout={1000}>
             <Grid item>
               <Avatar
-                src={ehannah}
+                src="/assets/images/resumePhoto.jpg"
                 classes={{ img: classes.image }}
                 className={classes.avatar}
               />

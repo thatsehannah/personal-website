@@ -1,9 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
-import aboutBackgroundLight from "../../assets/backgrounds/aboutBg.jpg";
 
 export const useStyles = makeStyles((theme) => ({
   aboutSection: {
-    backgroundImage: `url(${aboutBackgroundLight})`,
+    backgroundImage: `url("/assets/backgrounds/aboutBg.jpg")`,
     height: "80em",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",

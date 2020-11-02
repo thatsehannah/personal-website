@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import smoothScroll from "smoothscroll-polyfill";
 
 import Grid from "@material-ui/core/Grid";
@@ -27,7 +27,9 @@ const ScrollUpButton = () => {
     }, 300);
   };
 
-  window.addEventListener("scroll", checkScrollTop);
+  useEffect(() => {
+    window.addEventListener("scroll", checkScrollTop);
+  }, []);
 
   return (
     <Grid container>

@@ -1,5 +1,4 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import background from "../assets/backgrounds/landingBgLight.jpg";
 
 // font-family: 'Balsamiq Sans', cursive;
 // font-family: 'DM Sans', sans-serif;
@@ -24,7 +23,7 @@ const theme = createMuiTheme({
       main: "#d2be99",
     },
     background: {
-      landing: background,
+      landing: "/assets/backgrounds/landingBgLight.jpg",
     },
   },
   typography: {

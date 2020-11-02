@@ -10,7 +10,6 @@ import CloseIcon from "@material-ui/icons/Close";
 import Tooltip from "@material-ui/core/Tooltip";
 
 import { useStyles } from "./styles";
-import logo from "../../../assets/logo.png";
 
 const Menu = (props) => {
   const classes = useStyles();
@@ -48,7 +47,7 @@ const Menu = (props) => {
                 <Grid
                   item
                   component={"img"}
-                  src={logo}
+                  src="/assets/logo.png"
                   className={classes.logo}
                   alt="logo"
                   onClick={() => {

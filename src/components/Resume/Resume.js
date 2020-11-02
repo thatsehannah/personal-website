@@ -1,5 +1,6 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
+import dynamic from "next/dynamic";
 
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
@@ -9,7 +10,11 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import { useStyles } from "./styles";
 import { education, work, skills } from "./resumeData";
-import SkillBar from "react-skillbars";
+//import SkillBar from "react-skillbars";
+
+const DynamicSkillBarWithNoSSR = dynamic(() => import("react-skillbars"), {
+  ssr: false,
+});
 
 const EducationSkills = (props) => {
   const theme = useTheme();
@@ -201,7 +206,7 @@ const EducationSkills = (props) => {
                         }}
                       >
                         <Grid item>
-                          <SkillBar skills={skills} colors={skillbarColors} />
+                          <DynamicSkillBarWithNoSSR skills={skills} colors={skillbarColors} />
                         </Grid>
                       </Grid>
                     </Grid>

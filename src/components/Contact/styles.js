@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import contactBg from "../../assets/backgrounds/contactBg.jpeg";
 
 export const useStyles = makeStyles((theme) => ({
   contactSection: {
@@ -80,7 +79,7 @@ export const useStyles = makeStyles((theme) => ({
   contactBg: {
     height: "100%",
     width: "100%",
-    backgroundImage: `url(${contactBg})`,
+    backgroundImage: `url("/assets/backgrounds/contactBg.jpeg")`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",

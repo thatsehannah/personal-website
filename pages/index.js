@@ -1,20 +1,71 @@
-import React from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Link from '../src/Link';
+import React, { useState, useEffect } from "react";
 
-export default function Index() {
+import Grid from "@material-ui/core/Grid";
+import { ThemeProvider } from "@material-ui/styles";
+
+import LightTheme from "../src/themes/LightTheme"
+import DarkTheme from "../src/themes/DarkTheme";
+import Header from "../src/containers/Header/Header";
+import Landing from "../src/components/Landing/Landing";
+import About from "../src/components/About/About";
+import Resume from "../src/components/Resume/Resume";
+import Muses from "../src/components/Muses/Muses";
+import Contact from "../src/components/Contact/Contact";
+import Footer from "../src/containers/Footer/Footer";
+import ScrollUpButton from "../src/containers/ScrollUpButton/ScrollUpButton";
+
+const App = () => {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      localStorage.setItem("theme", "dark");
+      setTheme("dark");
+    } else {
+      localStorage.setItem("theme", "light");
+      setTheme("light");
+    }
+  };
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+
+    if (!localTheme) {
+      const currentHour = new Date().getHours();
+      if (currentHour >= 19 || currentHour <= 6) {
+        localStorage.setItem("theme", "dark");
+        setTheme("dark");
+      } else {
+        localStorage.setItem("theme", "light");
+        setTheme("light");
+      }
+    } else {
+      setTheme(localTheme);
+    }
+  }, []);
+
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Next.js v5-alpha example
-        </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page
-        </Link>
-      </Box>
-    </Container>
+    <ThemeProvider theme={theme === "light" ? LightTheme : DarkTheme}>
+      <ScrollUpButton />
+      <Header toggler={toggleTheme} />
+      <Grid item id="landing">
+        <Landing />
+      </Grid>
+      <Grid item id="about">
+        <About />
+      </Grid>
+      <Grid item id="education">
+        <Resume />
+      </Grid>
+      <Grid item id="muses">
+        <Muses />
+      </Grid>
+      <Grid item id="contact">
+        <Contact />
+      </Grid>
+      <Footer />
+    </ThemeProvider>
   );
-}
+};
+
+export default App;
