@@ -11,7 +11,25 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          
+          <link rel="icon" href="/assets/favicons/favicon.ico" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/assets/favicons/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/assets/favicons/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/assets/favicons/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/assets/favicons/site.webmanifest" />
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto&family=Balsamiq+Sans&family=DM+Sans&family=Archivo+Black&family=Lato&family=Oxygen:wght@300;400;700&family=Rubik:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
