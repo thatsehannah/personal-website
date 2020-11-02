@@ -28,8 +28,8 @@ const ScrollUpButton = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", checkScrollTop);
-  }, []);
+    window.addEventListener("scroll", checkScrollTop); 
+  }, [showScroll]);
 
   return (
     <Grid container>
