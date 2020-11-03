@@ -4,14 +4,14 @@ export const education = [
     subText: "Kennesaw State University",
     date: "May 2019",
     description:
-      "Rigourous online program where I maintained a 3.6 GPA while relocating from Atlanta, GA to Reston, VA to Bentonville, AR to Los Angeles, CA. Led a group of colleagues in our Capstone Project. Delegated tasks and set weekly deadlines to ensure project requirements were met. Concentration in I.T. Security.",
+      "Rigorous online program where I maintained a 3.6 GPA while relocating from Atlanta, GA to Reston, VA to Bentonville, AR to Los Angeles, CA. Led a group of colleagues in our Capstone Project. Delegated tasks and set weekly deadlines to ensure project requirements were met. Concentration in I.T. Security.",
   },
   {
     header: "Bachelor's of Computer Science",
     subText: "Georgia State University",
     date: "May 2017",
     description:
-      "New Student Orientation Leader from 2015-2016. Brother of Alpha Kappa Psi Professinal Business Fraternity, serving in several leadership roles. Learned a variety of useful technologies, e.g Java, SQL, and HTML. Designed and created several course projects, such as an Android application for sneaker collectors and a NBA playoffs simulator for desktop.",
+      "New Student Orientation Leader from 2015-2016. Member of Alpha Kappa Psi Professinal Business Fraternity, serving in several leadership roles. Learned a variety of useful technologies, e.g Java, SQL, and HTML. Designed and created several course projects, such as an Android application for sneaker collectors and a NBA playoffs simulator for desktop.",
   },
 ];
 
