@@ -35,15 +35,15 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <meta property="og:type" key="og:type" content="website" />
-          <meta property="og:image" key="og:image" content="https://i.imgur.com/gDgPQg4.png" />
+          <meta property="og:image" key="og:image" content="https://i.imgur.com/TUg2dk7.jpg" />
           <meta property="og:image:type" key="og:image:type" content="image/png" />
           <meta property="og:image:width" key="og:image:width" content="1200" />
           <meta proeprty="og:image:height" key="og:image:height" content="630" />
-          <meta proerty="og:image:alt" key="og:image:alt" content="Elliot C. Hannah" />
+          <meta proerty="og:image:alt" key="og:image:alt" content="Elliot Hannah" />
           <meta
             property="og:title"
             key="og:title"
-            content="Elliot C. Hannah | Full Stack Developer • Beatmaker • Sneakerhead"
+            content="Elliot Hannah | Full Stack Developer • Beatmaker • Sneakerhead"
           />
           <meta property="og:url" key="og:url" content="https://thatsehannah.com" />
           <link rel="canonical" key="canonical" href="https://thatsehannah.com" />

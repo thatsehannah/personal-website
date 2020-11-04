@@ -32,7 +32,7 @@ export const work = [
   },
   {
     header: "Software Engineer (Contractor)",
-    subText: "Wal-Mart Labs",
+    subText: "Walmart Labs",
     date: "April 2018 - September 2018",
     description:
       "Constructed a batch script that installed an automation plugin to a 3rd party application used for designing store floorplans. Designed and implemented a SQL database to house various store floorplan data for my team's floorplan automation project. Wrote integration and unit tests for legacy and novel applications. Improved legacy code when needed.",
