@@ -23,28 +23,11 @@ export const useStyles = makeStyles((theme) => ({
       backgroundColor: "transparent",
     },
   },
-  circle: {
-    backgroundColor: theme.palette.primary.main,
-    borderRadius: "50%",
-    height: "2em",
-    width: "2em",
-  },
-  scrollUpItem: {
-    position: "relative",
-    top: -70,
-    [theme.breakpoints.down("lg")]: {
-      top: -74,
+  copyrightLink: {
+    color: "#696969",
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
     },
-    [theme.breakpoints.down("sm")]: {
-      top: -78,
-    },
-    [theme.breakpoints.down("xs")]: {
-      top: -40,
-    },
-  },
-  scrollUpIcon: {
-    height: "2em",
-    width: "2em",
-    color: theme.palette.type === "light" ? "#fff" : "#000",
   },
 }));

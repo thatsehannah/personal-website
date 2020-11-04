@@ -47,7 +47,23 @@ const Footer = () => {
                 gutterBottom
                 className={classes.copyright}
               >
-                Developed by E. Hannah - Full Stack Developer
+                Built with ❤ by me using{" "}
+                <a
+                  className={classes.copyrightLink}
+                  target="_blank"
+                  href="https://reactjs.org"
+                >
+                  React JS
+                </a>
+                . Visit project{" "}
+                <a
+                  className={classes.copyrightLink}
+                  target="_blank"
+                  href="https://github.com/thatsehannah/personal-website-nextjs"
+                >
+                  here
+                </a>
+                .
               </Typography>
             </Grid>
           </Grid>
