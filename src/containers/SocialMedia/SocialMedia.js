@@ -19,7 +19,7 @@ const SocialMedia = (props) => {
       title: props.location,
       type: 'LinkedIn',
       icon: SiLinkedin,
-      link: "https://www.linkedin.com/in/elliotchannahiii/",
+      link: "https://www.linkedin.com/in/elliothannah/",
     },
     {
       title: props.location,
