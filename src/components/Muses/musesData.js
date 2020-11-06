@@ -8,8 +8,8 @@ export const muses = [
     description:
       "Wilma is the true definition of 'a friend became the love of my life'. We were good friends throughout undergrad and started dating in 2016. Now we're engaged and are currently planning our wedding for Spring 2021. We do everything together from exploring different places around the city to sharing food while we watch television. She's extremely smart, a pleasure to be around, and has helped me improve in so many areas in my life.",
     socialMedia: {
-      type: 'Instagram',
-      title: 'Muse Fiancée',
+      type: "Instagram",
+      title: "Muse Fiancée",
       icon: SiInstagram,
       tooltip: "Wilma's Instagram page",
       link: "https://www.instagram.com/lavishbombs/",
@@ -50,8 +50,8 @@ export const muses = [
       "Beat making has been a pasttime of mine for over 10 years now. I particularly love chopping up samples of older music and adding a new twist to it. Check out my Soundcloud to here some of my creations.",
     socialMedia: {
       icon: SiSoundcloud,
-      title: 'Muse Music',
-      type: 'Soundcloud',
+      title: "Muse Music",
+      type: "Soundcloud",
       tooltip: "My Soundcloud page",
       link: "https://soundcloud.com/thatsehannah/tracks",
     },
@@ -73,5 +73,14 @@ export const muses = [
     description:
       "One of the biggest reasons why I wanted to become a developer is because of the ever-evolving capabilities of technology. Technology is without a doubt one of the most significant entities in our modern lives. I've always been attracted to how the IoT, such as computers and mobile phones, work behind the scenes. That solely drove me to learn how to code and want to continue to be hands-on with the growing world of tech.",
     fadeInDuration: 1100,
+  },
+  {
+    title: "Black Lives Matter",
+    pic: {
+      url: "/assets/images/blm.jpeg",
+      title: "Black lives matter protest sign",
+    },
+    description: "As I continue to be unapologetically Black, I believe it is important to let my voice be heard during these trying times. It\'s disheartening that people consciously refuse to understand the phrase \'Black lives matter.\' It\'s not saying that our lives are greater than any other race; it\'s simply an outcry to the blatant racial injustices, profiling, marginalizing, and oppression that WE endure on the daily. Even through it all, I am PROUD to be Black and will not hold my tongue to express it ✊🏾.",
+    fadeInDuration: 1300,
   },
 ];
