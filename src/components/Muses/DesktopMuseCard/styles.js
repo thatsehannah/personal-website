@@ -9,6 +9,13 @@ export const useStyles = makeStyles((theme) => ({
     "&:hover $museImage": {
       height: "8em",
     },
+    [theme.breakpoints.down('lg')]: {
+      height: '26em',
+      width: '26em',
+      "&:hover $museImage": {
+        height: "6em",
+      },
+    }
   },
   cardContent: {
     backgroundColor:
@@ -45,8 +52,15 @@ export const useStyles = makeStyles((theme) => ({
     "&:hover": {
       color: theme.palette.primary.dark,
     },
+    [theme.breakpoints.down('lg')]: {
+      height: '1.4em',
+      width: '1.4em'
+    }
   },
   museText: {
     color: theme.palette.type === "light" ? "#000" : "#fff",
+    [theme.breakpoints.down('lg')]:{
+      fontSize: '1em'
+    }
   },
 }));

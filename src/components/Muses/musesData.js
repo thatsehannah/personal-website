@@ -24,18 +24,17 @@ export const muses = [
     fadeInDuration: 600,
   },
   {
-    title: "I ♥️ L.A.",
+    title: "Black Lives Matter",
     pic: {
-      url: "/assets/images/overlook.jpeg",
-      title: "Overlook of Los Angeles",
+      url: "/assets/images/blm.jpeg",
+      title: "Black lives matter protest sign",
     },
-    description:
-      'Besides the nice weather, the Lakers, landscape, etc., the main thing I love about L.A. is that it helped me culminate a new definition of "success". I have developed a different outlook on it since moving here and I am more determined to be successful in my career. Even though it is a bit expensive to live in L.A., it is definitely a place I can see myself my settling and raising a family.',
+    description: "As I continue to be unapologetically Black, I believe it is important to let my voice be heard during these trying times. It\'s disheartening that people consciously refuse to understand the phrase \'Black lives matter.\' It\'s not saying that our lives are greater than any other race; it\'s simply an outcry to the blatant racial injustices, profiling, marginalizing, and oppression that WE endure on the daily. Even through it all, I am PROUD to be Black and will not hold my tongue to express it ✊🏾.",
     fadeInDuration: 700,
   },
   {
     title: "Nipsey Hussle",
-    pic: { url: "/assets/images/nip.jpeg", title: "Nipsey Hussle" },
+    pic: { url: "/assets/images/nipseyhussle.jpeg", title: "Nipsey Hussle" },
     description:
       'I became a fan of Nipsey Hussle when my fiancée and I moved to L.A in Fall 2018. His music helped ease my anxiety of moving here in the fashion we did and also helped me become more comfortable to call this place "home". Nipsey helped me see L.A. in a different light from what I saw on television. He also inspired me to stay dedicated to reach my goals and to keep striving because my hard work WILL pay off in the long run. Thank you Nipsey, The Marathon Continues 🕊.',
     fadeInDuration: 800,
@@ -75,12 +74,13 @@ export const muses = [
     fadeInDuration: 1100,
   },
   {
-    title: "Black Lives Matter",
+    title: "I ♥️ L.A.",
     pic: {
-      url: "/assets/images/blm.jpeg",
-      title: "Black lives matter protest sign",
+      url: "/assets/images/overlook.jpeg",
+      title: "Overlook of Los Angeles",
     },
-    description: "As I continue to be unapologetically Black, I believe it is important to let my voice be heard during these trying times. It\'s disheartening that people consciously refuse to understand the phrase \'Black lives matter.\' It\'s not saying that our lives are greater than any other race; it\'s simply an outcry to the blatant racial injustices, profiling, marginalizing, and oppression that WE endure on the daily. Even through it all, I am PROUD to be Black and will not hold my tongue to express it ✊🏾.",
-    fadeInDuration: 1300,
+    description:
+      'Besides the nice weather, the Lakers, landscape, etc., the main thing I love about L.A. is that it helped me culminate a new definition of "success". I have developed a different outlook on it since moving here and I am more determined to be successful in my career. Even though it is a bit expensive to live in L.A., it is definitely a place I can see myself my settling and raising a family.',
+    fadeInDuration: 1200,
   },
 ];
