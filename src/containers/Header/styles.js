@@ -4,10 +4,16 @@ export const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
     marginBottom: "-0.5em",
+    [theme.breakpoints.only('lg')]: {
+      marginBottom: "-1em"
+    }
   },
   appBar: {
     height: "3.5em",
     backgroundColor: theme.palette.common.nav.appBar,
+    [theme.breakpoints.down('lg')]: {
+      height: '3em'
+    }
   },
   button: {
     "&:hover": {
@@ -20,6 +26,9 @@ export const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     "&:hover": {
       color: theme.palette.primary.dark,
+    },
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.2em'
     },
     [theme.breakpoints.down("md")]: {
       fontSize: "1.5em",

@@ -13,6 +13,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       backgroundAttachment: "scroll",
+      backgroundImage: `url(${theme.palette.background.mobileLanding})`,
     },
     [theme.breakpoints.down("xs")]: {
       height: "40em",

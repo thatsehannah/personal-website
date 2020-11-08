@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import smoothScroll from "smoothscroll-polyfill";
 
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import AppBar from "@material-ui/core/AppBar";
 import Tooltip from "@material-ui/core/Tooltip";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -31,6 +32,8 @@ const ElevationScroll = (props) => {
 const Header = (props) => {
   const [openMenu, setOpenMenu] = useState(false);
   const theme = useTheme();
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesXL = useMediaQuery(theme.breakpoints.down("xl"));
   const classes = useStyles();
 
   const toggleModeHandler = () => {
@@ -66,7 +69,16 @@ const Header = (props) => {
               alignItems="center"
               justify="space-between"
             >
-              <Grid item>
+              <Grid
+                item
+                style={{
+                  marginTop: matchesMD
+                    ? "-0.3em"
+                    : matchesXL
+                    ? "-0.4em"
+                    : "-0.8em",
+                }}
+              >
                 <IconButton
                   className={classes.button}
                   onClick={() => setOpenMenu(true)}
@@ -76,7 +88,16 @@ const Header = (props) => {
                   <MenuIcon className={classes.appBarIcon} />
                 </IconButton>
               </Grid>
-              <Grid item>
+              <Grid
+                item
+                style={{
+                  marginTop: matchesMD
+                    ? "-0.3em"
+                    : matchesXL
+                    ? "-0.4em"
+                    : "-0.8em",
+                }}
+              >
                 <Tooltip title="Toggle light/dark mode">
                   <IconButton
                     onClick={toggleModeHandler}

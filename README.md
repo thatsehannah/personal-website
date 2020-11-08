@@ -1,31 +1,8 @@
-# Next.js example
+# Elliot Hannah's Personal Website
 
-## How to use
+This is my personal website built with Material-UI and React. Check it out [here](https://thatsehannah.com).
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
+## Photo Creds
 
-```sh
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs
-cd nextjs
-```
+Photos included on my site are by [Joseph Ngabo](https://unsplash.com/@jngabo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText), [john ko](https://unsplash.com/@jko001?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText), [Junior Samson](https://unsplash.com/@junior_jamsbro?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText), [Morgan Richardson](https://unsplash.com/@morgancodes?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText), [Jordan Pulmano](https://unsplash.com/@jordanpulmano?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText), Allen Berezovsky (Getty Images), and myself.
 
-Install it and run:
-
-```sh
-npm install
-npm run dev
-```
-
-or:
-
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui-org/material-ui/tree/master/examples/nextjs)
-
-## The idea behind the example
-
-[Next.js](https://github.com/zeit/next.js) is a framework for server-rendered React apps.
-
-## Troubleshooting
-
-### `Warning: Prop className did not match.`
-
-If you get this warning, please make sure that you configure `getInitialProps` in `pages/_document.js` correctly. Check the code in this example for more details.
