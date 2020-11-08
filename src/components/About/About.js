@@ -121,7 +121,7 @@ const About = (props) => {
                         >
                           In my spare time, you can catch me doing a variety of
                           activities, such as making beats, playing NBA2K with
-                          my friends, attending Dodgers or Lakers games (prior
+                          my friends, attending Lakers games (prior
                           to COVID-19), or exploring the city with my fiancée
                           and pup Coco.
                         </Typography>

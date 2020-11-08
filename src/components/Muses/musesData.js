@@ -36,7 +36,7 @@ export const muses = [
     title: "Nipsey Hussle",
     pic: { url: "/assets/images/nipseyhussle.jpeg", title: "Nipsey Hussle" },
     description:
-      'I became a fan of Nipsey Hussle when my fiancée and I moved to L.A in Fall 2018. His music helped ease my anxiety of moving here in the fashion we did and also helped me become more comfortable to call this place "home". Nipsey helped me see L.A. in a different light from what I saw on television. He also inspired me to stay dedicated to reach my goals and to keep striving because my hard work WILL pay off in the long run. Thank you Nipsey, The Marathon Continues 🕊.',
+      'I became a fan of Nipsey Hussle when my fiancée and I moved to L.A in Fall 2018. His music helped ease my anxiety of moving here in the fashion we did and also helped me become more comfortable to call this place "home". Nipsey helped me see L.A. in a different light from what I saw on television. He also inspired me to stay dedicated to reach my goals and to keep striving because my hard work WILL pay off in the long run. Thank you Nipsey, The Marathon Continues 🏁.',
     fadeInDuration: 800,
   },
   {
