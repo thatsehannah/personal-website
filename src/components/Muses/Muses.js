@@ -14,7 +14,9 @@ import MobileMuseCard from "./MobileMuseCard/MobileMuseCard";
 const Muses = (props) => {
   const classes = useStyles();
   const theme = useTheme();
-  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md")); 
+
+  const action = matchesMD ? "Tap" : "Hover over";
 
   return (
     <LazyLoad offset={150}>
@@ -37,7 +39,7 @@ const Muses = (props) => {
               gutterBottom
               className={classes.text}
             >
-              These are a few things that I find inspiration in on the daily:
+              These are a few things that I find inspiration from on the daily. {action} the images below for a brief description.
             </Typography>
           </Grid>
           <Grid item>

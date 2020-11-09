@@ -29,7 +29,8 @@ export const muses = [
       url: "/assets/images/blm.jpeg",
       title: "Black lives matter protest sign",
     },
-    description: "As I continue to be unapologetically Black, I believe it is important to let my voice be heard during these trying times. It\'s disheartening that people consciously refuse to understand the phrase \'Black lives matter.\' It\'s not saying that our lives are greater than any other race; it\'s simply an outcry to the blatant racial injustices, profiling, marginalizing, and oppression that WE endure on the daily. Even through it all, I am PROUD to be Black and will not hold my tongue to express it ✊🏾.",
+    description:
+      "As I continue to be unapologetically Black, I believe it is important to let my voice be heard during these trying times. It's disheartening that people consciously refuse to understand the phrase 'Black lives matter.' It's not saying that our lives are greater than any other race; it's simply an outcry to the blatant racial injustices, profiling, marginalizing, and oppression that WE endure on the daily. Even through it all, I am PROUD to be Black and will not hold my tongue to express it ✊🏾.",
     fadeInDuration: 700,
   },
   {
@@ -80,7 +81,7 @@ export const muses = [
       title: "Overlook of Los Angeles",
     },
     description:
-      'Besides the nice weather, the Lakers, landscape, etc., the main thing I love about L.A. is that it helped me culminate a new definition of "success". I have developed a different outlook on it since moving here and I am more determined to be successful in my career. Even though it is a bit expensive to live in L.A., it is definitely a place I can see myself my settling and raising a family.',
+      'Besides the nice weather, the Lakers, landscape, etc., the main thing I love about L.A. is that it helped me culminate a new definition of "success". I have developed a different outlook on it since moving here and I am more determined to be successful in my career. Even though it is a bit expensive to live in L.A., it is definitely a place I can see myself settling and raising a family.',
     fadeInDuration: 1200,
   },
 ];
