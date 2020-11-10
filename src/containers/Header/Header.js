@@ -69,16 +69,7 @@ const Header = (props) => {
               alignItems="center"
               justify="space-between"
             >
-              <Grid
-                item
-                style={{
-                  marginTop: matchesMD
-                    ? "-0.3em"
-                    : matchesXL
-                    ? "-0.4em"
-                    : "-0.8em",
-                }}
-              >
+              <Grid item>
                 <IconButton
                   className={classes.button}
                   onClick={() => setOpenMenu(true)}
@@ -88,16 +79,7 @@ const Header = (props) => {
                   <MenuIcon className={classes.appBarIcon} />
                 </IconButton>
               </Grid>
-              <Grid
-                item
-                style={{
-                  marginTop: matchesMD
-                    ? "-0.3em"
-                    : matchesXL
-                    ? "-0.4em"
-                    : "-0.8em",
-                }}
-              >
+              <Grid item>
                 <Tooltip title="Toggle light/dark mode">
                   <IconButton
                     onClick={toggleModeHandler}
