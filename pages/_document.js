@@ -31,7 +31,7 @@ export default class MyDocument extends Document {
           />
           <link rel="manifest" href="/assets/favicons/site.webmanifest" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto&family=Balsamiq+Sans&family=DM+Sans&family=Archivo+Black&family=Lato&family=Oxygen:wght@300;400;700&family=Rubik:wght@300;400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto&family=Archivo+Black&family=Rubik:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
           <meta property="og:type" key="og:type" content="website" />

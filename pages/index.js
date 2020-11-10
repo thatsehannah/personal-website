@@ -17,7 +17,6 @@ import ScrollUpButton from "../src/containers/ScrollUpButton/ScrollUpButton";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
-  const [pageVisited, setPageVisited] = useState(false);
 
   const toggleTheme = () => {
     if (theme === "light") {
