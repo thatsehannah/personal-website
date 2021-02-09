@@ -47,10 +47,12 @@ export const work = [
 ];
 
 export const skills = [
-  { type: "C#/.NET", level: 90 },
-  { type: "SQL", level: 75 },
-  { type: "ReactJS", level: 93 },
+  { type: "iOS/Android", level: 75 },
+  { type: "ReactJS", level: 95 },
   { type: "JavaScript", level: 85 },
+  { type: "C#/.NET", level: 90 },
+  { type: "Python", level: 55 },
+  { type: "SQL", level: 75 },
   { type: "Java", level: 75 },
-  { type: "HTML5/CSS", level: 83 },
+  { type: "HTML5/CSS", level: 85 },
 ];

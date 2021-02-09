@@ -12,7 +12,7 @@ export const muses = [
       title: "Muse Fiancée",
       icon: SiInstagram,
       tooltip: "Wilma's Instagram page",
-      link: "https://www.instagram.com/lavishbombs/",
+      link: "https://www.instagram.com/moneybaggwil/",
     },
     fadeInDuration: 500,
   },
@@ -71,7 +71,7 @@ export const muses = [
       title: "Workstation with code on computer",
     },
     description:
-      "One of the biggest reasons why I wanted to become a developer is because of the ever-evolving capabilities of technology. Technology is without a doubt one of the most significant entities in our modern lives. I've always been attracted to how the IoT, such as computers and mobile phones, work behind the scenes. That solely drove me to learn how to code and want to continue to be hands-on with the growing world of tech.",
+      "Two of the biggest reasons why I am passionate about technology is because of the ever-evolving capabilities of technology and the reward of producing quality products. Technology is without a doubt one of the most significant entities in our modern lives. I've always been attracted to how the IoT, such as computers and mobile phones, work behind the scenes. That solely drove me to learn how to code and want to continue to be hands-on with the growing world of tech.",
     fadeInDuration: 1100,
   },
   {
