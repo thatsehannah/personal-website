@@ -1,7 +1,8 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/core/styles";
-import createEmotionServer from "create-emotion-server";
+//import createEmotionServer from "create-emotion-server";
+import createEmotionServer from "@emotion/server/create-instance";
 import { cache } from "./_app.js";
 
 const { extractCritical } = createEmotionServer(cache);
@@ -43,7 +44,7 @@ export default class MyDocument extends Document {
           <meta
             property="og:title"
             key="og:title"
-            content="Elliot Hannah | Full Stack Developer • Beatmaker • Sneakerhead"
+            content="Elliot Hannah | Mobile App Developer • Beatmaker • Sneakerhead"
           />
           <meta property="og:url" key="og:url" content="https://thatsehannah.com" />
           <link rel="canonical" key="canonical" href="https://thatsehannah.com" />

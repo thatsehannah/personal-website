@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/cache": "^10.0.29",
     "@emotion/core": "^10.0.35",
+    "@emotion/server": "^11.0.0",
     "@emotion/styled": "latest",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
