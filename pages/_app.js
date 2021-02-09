@@ -25,7 +25,7 @@ export default function MyApp(props) {
   return (
     <CacheProvider value={cache}>
       <Head>
-        <title>Elliot Hannah | Full Stack Developer</title>
+        <title>Elliot Hannah | Mobile App Developer</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta
           name="description"
