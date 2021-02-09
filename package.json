@@ -3,7 +3,7 @@
   "version": "5.0.0",
   "private": true,
   "dependencies": {
-    "@emotion/cache": "latest",
+    "@emotion/cache": "^10.0.29",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "latest",
     "@material-ui/core": "^4.11.0",
