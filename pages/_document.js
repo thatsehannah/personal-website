@@ -44,7 +44,7 @@ export default class MyDocument extends Document {
           <meta
             property="og:title"
             key="og:title"
-            content="Elliot Hannah | Mobile App Developer • Beatmaker • Sneakerhead"
+            content="Elliot Hannah | Full Stack Developer • Beatmaker • Sneakerhead"
           />
           <meta property="og:url" key="og:url" content="https://thatsehannah.com" />
           <link rel="canonical" key="canonical" href="https://thatsehannah.com" />
