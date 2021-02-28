@@ -87,6 +87,18 @@ const Menu = (props) => {
                 className={classes.button}
                 onClick={() => {
                   props.setOpenMenu(false);
+                  props.scrollIntoView("#projects");
+                }}
+              >
+                <ListItemText disableTypography className={classes.listItem}>
+                  Projects
+                </ListItemText>
+              </ListItem>
+              <ListItem
+                button
+                className={classes.button}
+                onClick={() => {
+                  props.setOpenMenu(false);
                   props.scrollIntoView("#muses");
                 }}
               >
