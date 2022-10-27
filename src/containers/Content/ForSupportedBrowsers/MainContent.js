@@ -30,15 +30,15 @@ const Supported = (props) => {
       <Grid item id='education'>
         <Resume />
       </Grid>
-      <Grid item id='projects'>
+      {/* <Grid item id='projects'>
         <Projects />
-      </Grid>
+      </Grid> */}
       <Grid item id='muses'>
         <Muses />
       </Grid>
-      <Grid item id='contact'>
+      {/* <Grid item id='contact'>
         <Contact />
-      </Grid>
+      </Grid> */}
       <Grid item>
         <Footer />
       </Grid>

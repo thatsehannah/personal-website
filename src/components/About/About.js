@@ -1,47 +1,47 @@
-import React from "react";
-import LazyLoad from "react-lazyload";
-import ReactGA from 'react-ga'
-import FadeIn from "react-lazyload-fadein";
+import React from 'react';
+import LazyLoad from 'react-lazyload';
+import ReactGA from 'react-ga';
+import FadeIn from 'react-lazyload-fadein';
 
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { useTheme } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import Avatar from "@material-ui/core/Avatar";
-import Pin from "@material-ui/icons/PersonPinCircle";
-import IphoneIcon from "@material-ui/icons/PhoneIphone";
-import EmailIcon from "@material-ui/icons/MailOutline";
-import BirthdayIcon from "@material-ui/icons/Cake";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
+import Pin from '@material-ui/icons/PersonPinCircle';
+import IphoneIcon from '@material-ui/icons/PhoneIphone';
+import EmailIcon from '@material-ui/icons/MailOutline';
+import BirthdayIcon from '@material-ui/icons/Cake';
 
-import SocialMedia from "../../containers/SocialMedia/SocialMedia";
-import { useStyles } from "./styles";
+import SocialMedia from '../../containers/SocialMedia/SocialMedia';
+import { useStyles } from './styles';
 
 const About = (props) => {
   const classes = useStyles(props);
   const theme = useTheme();
 
-  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
-  const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
+  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+  const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
+  const matchesLG = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <LazyLoad offset={150}>
       <Grid
         container
-        justify="center"
-        alignItems="center"
+        justify='center'
+        alignItems='center'
         className={classes.aboutSection}
       >
         <Grid item>
-          <Grid container justify="center">
+          <Grid container justify='center'>
             <Paper className={classes.paper}>
-              <Grid container direction="column" alignItems="center">
+              <Grid container direction='column' alignItems='center'>
                 <Grid item>
                   <Typography
-                    variant="h1"
-                    align="center"
+                    variant='h1'
+                    align='center'
                     className={classes.sectionTitle}
                     gutterBottom
                   >
@@ -51,16 +51,16 @@ const About = (props) => {
                 <Grid item>
                   <Grid
                     container
-                    direction={matchesMD ? "column" : "row"}
-                    justfiy={matchesMD ? "center" : undefined}
+                    direction={matchesMD ? 'column' : 'row'}
+                    justfiy={matchesMD ? 'center' : undefined}
                   >
-                    <Grid item container justify="center" lg={3}>
+                    <Grid item container justify='center' lg={3}>
                       <FadeIn
                         render={(onload) => (
                           <Grid onLoad={onload} item>
                             <Avatar
-                              variant="rounded"
-                              src="/assets/images/wedding.jpeg"
+                              variant='rounded'
+                              src='/assets/images/ehannah.jpg'
                               className={classes.avatar}
                             />
                           </Grid>
@@ -71,20 +71,20 @@ const About = (props) => {
                     <Grid
                       item
                       container
-                      justify="center"
-                      style={{ marginTop: matchesMD ? "2em" : undefined }}
+                      justify='center'
+                      style={{ marginTop: matchesMD ? '2em' : undefined }}
                       lg
                     >
                       <Grid
                         item
                         style={{
-                          width: matchesXS ? "auto" : matchesMD ? "90%" : "75%",
+                          width: matchesXS ? 'auto' : matchesMD ? '90%' : '75%',
                         }}
                       >
                         <Typography
                           paragraph
-                          align="center"
-                          variant="body2"
+                          align='center'
+                          variant='body2'
                           className={classes.aboutMeText}
                           gutterBottom
                         >
@@ -98,8 +98,8 @@ const About = (props) => {
                         </Typography>
                         <Typography
                           paragraph
-                          align="center"
-                          variant="body2"
+                          align='center'
+                          variant='body2'
                           className={classes.aboutMeText}
                           gutterBottom
                         >
@@ -111,53 +111,54 @@ const About = (props) => {
                           This led me to relocate to Bentonville, AR where I
                           first got a taste of being a full stack developer.
                           After a brief stint in Bentonville, I was relocated to
-                          Los Angeles for a different project, and I've been
-                          here ever since!.
+                          Los Angeles for a different project. My wife and I are
+                          currently residing in Houston, TX for the duration of
+                          her Ph.D internship with plans to move back to L.A. in
+                          the near future.
                         </Typography>
                         <Typography
-                          align="center"
-                          variant="body2"
+                          align='center'
+                          variant='body2'
                           className={classes.aboutMeText}
                         >
                           In my spare time, you can catch me doing a variety of
-                          activities, such as making beats, playing NBA2K with
-                          my friends, attending Lakers games (prior
-                          to COVID-19), or exploring the city with my fiancée
-                          and pup Coco.
+                          activities, such as making beats, reselling sneakers,
+                          playing NBA2K with my friends, attending NBA games, or
+                          exploring the city with my wife and pup Coco.
                         </Typography>
                       </Grid>
                     </Grid>
                     <Grid
                       item
                       container
-                      alignItems="center"
-                      justify={matchesMD ? "center" : undefined}
-                      style={{ marginTop: matchesMD ? "2em" : undefined }}
+                      alignItems='center'
+                      justify={matchesMD ? 'center' : undefined}
+                      style={{ marginTop: matchesMD ? '2em' : undefined }}
                       lg={3}
                     >
-                      <Grid item container direction="column">
+                      <Grid item container direction='column'>
                         <Grid
                           item
                           container
-                          alignItems={matchesSM ? "center" : undefined}
-                          justify="center"
+                          alignItems={matchesSM ? 'center' : undefined}
+                          justify='center'
                         >
                           <Grid item>
                             <Grid
                               container
-                              direction="column"
-                              alignItems="center"
+                              direction='column'
+                              alignItems='center'
                             >
-                              <Grid item style={{ marginBottom: "0.75em" }}>
-                                <Grid container alignItems="center">
-                                  <Grid item style={{ marginRight: "0.61em" }}>
+                              <Grid item style={{ marginBottom: '0.75em' }}>
+                                <Grid container alignItems='center'>
+                                  <Grid item style={{ marginRight: '0.61em' }}>
                                     <BirthdayIcon
                                       className={classes.contactIcon}
                                     />
                                   </Grid>
                                   <Grid item>
                                     <Typography
-                                      variant="body2"
+                                      variant='body2'
                                       className={classes.contactText}
                                     >
                                       12/31/1993
@@ -165,47 +166,47 @@ const About = (props) => {
                                   </Grid>
                                 </Grid>
                               </Grid>
-                              <Grid item style={{ marginBottom: "0.75em" }}>
-                                <Grid container alignItems="center">
-                                  <Grid item style={{ marginRight: "0.61em" }}>
+                              <Grid item style={{ marginBottom: '0.75em' }}>
+                                <Grid container alignItems='center'>
+                                  <Grid item style={{ marginRight: '0.61em' }}>
                                     <IphoneIcon
                                       className={classes.contactIcon}
                                     />
                                   </Grid>
                                   <Grid item>
                                     <Typography
-                                      variant="body2"
-                                      component={matchesMD ? "a" : undefined}
+                                      variant='body2'
+                                      component={matchesMD ? 'a' : undefined}
                                       href={
-                                        matchesMD ? "tel:7066317005" : undefined
+                                        matchesMD ? 'tel:7066317005' : undefined
                                       }
                                       className={[
                                         classes.contactText,
                                         classes.contactPhoneText,
-                                      ].join(" ")}
+                                      ].join(' ')}
                                     >
                                       (706) 631-7005
                                     </Typography>
                                   </Grid>
                                 </Grid>
                               </Grid>
-                              <Grid item style={{ marginBottom: "0.75em" }}>
-                                <Grid container alignItems="center">
-                                  <Grid item style={{ marginRight: "0.61em" }}>
+                              <Grid item style={{ marginBottom: '0.75em' }}>
+                                <Grid container alignItems='center'>
+                                  <Grid item style={{ marginRight: '0.61em' }}>
                                     <EmailIcon
                                       className={classes.contactIcon}
                                     />
                                   </Grid>
                                   <Grid item>
                                     <Typography
-                                      variant="body2"
-                                      component={"a"}
-                                      href="mailto:elliotchannah@outlook.com"
-                                      target="_blank"
+                                      variant='body2'
+                                      component={'a'}
+                                      href='mailto:elliotchannah@outlook.com'
+                                      target='_blank'
                                       className={[
                                         classes.contactText,
                                         classes.contactEmailText,
-                                      ].join(" ")}
+                                      ].join(' ')}
                                     >
                                       elliotchannah@outlook.com
                                     </Typography>
@@ -213,17 +214,17 @@ const About = (props) => {
                                 </Grid>
                               </Grid>
                               <Grid item>
-                                <Grid container alignItems="center">
-                                  <Grid item style={{ marginRight: "0.61em" }}>
+                                <Grid container alignItems='center'>
+                                  <Grid item style={{ marginRight: '0.61em' }}>
                                     <Pin className={classes.contactIcon} />
                                   </Grid>
                                   <Grid item>
                                     <Typography
-                                      variant="body2"
+                                      variant='body2'
                                       className={classes.contactText}
                                     >
-                                      {" "}
-                                      Los Angeles, CA
+                                      {' '}
+                                      Houston, TX
                                     </Typography>
                                   </Grid>
                                 </Grid>
@@ -234,17 +235,17 @@ const About = (props) => {
                         <Grid
                           item
                           container
-                          justify="center"
-                          style={{ marginTop: "2em" }}
+                          justify='center'
+                          style={{ marginTop: '2em' }}
                         >
                           <Grid item>
-                            <Grid container direction="column">
+                            <Grid container direction='column'>
                               <SocialMedia
-                                location="About"
+                                location='About'
                                 size={[35, 40, 25]}
                                 color={
                                   matchesLG
-                                    ? "#d2be99"
+                                    ? '#d2be99'
                                     : theme.palette.primary.main
                                 }
                               />

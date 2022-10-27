@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
-import ReactGA from "react-ga";
+import React, { useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
 
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import Fade from "@material-ui/core/Fade";
-import DownloadIcon from "@material-ui/icons/GetApp";
-import Typography from "@material-ui/core/Typography";
-import Avatar from "@material-ui/core/Avatar";
-import { useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import Fade from '@material-ui/core/Fade';
+import DownloadIcon from '@material-ui/icons/GetApp';
+import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import { useStyles } from "./styles";
+import { useStyles } from './styles';
 
 const Landing = () => {
   const theme = useTheme();
   const classes = useStyles();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
@@ -28,22 +28,22 @@ const Landing = () => {
   return (
     <Grid
       container
-      justify="center"
-      alignItems="center"
+      justify='center'
+      alignItems='center'
       className={classes.landingSection}
     >
       <Grid item>
         <Grid
           container
-          alignItems="center"
-          justify={matchesSM ? "center" : undefined}
-          direction="column"
+          alignItems='center'
+          justify={matchesSM ? 'center' : undefined}
+          direction='column'
           className={classes.intro}
         >
           <Fade in={isPageLoaded} timeout={1000}>
             <Grid item>
               <Avatar
-                src="/assets/images/resumePhoto.jpeg"
+                src='/assets/images/resumePhoto.jpeg'
                 classes={{ img: classes.image }}
                 className={classes.avatar}
               />
@@ -52,8 +52,8 @@ const Landing = () => {
 
           <Grid item>
             <Typography
-              variant="h1"
-              align="center"
+              variant='h1'
+              align='center'
               gutterBottom
               className={classes.name}
             >
@@ -62,33 +62,33 @@ const Landing = () => {
           </Grid>
           <Grid item>
             <Typography
-              variant="h3"
-              align="center"
+              variant='h3'
+              align='center'
               gutterBottom
               className={classes.statement}
             >
-              Full Stack Developer <span className={classes.bulletPt}>•</span>{" "}
+              Full Stack Developer <span className={classes.bulletPt}>•</span>{' '}
               Beat Maker <span className={classes.bulletPt}>•</span> Sneakerhead
             </Typography>
           </Grid>
           <Grid item>
-            <Grid container justify={matchesSM ? "center" : undefined}>
+            <Grid container justify={matchesSM ? 'center' : undefined}>
               <Button
                 onClick={() =>
                   ReactGA.event({
-                    category: "Resume",
-                    action: "Resume Downloaded",
+                    category: 'Resume',
+                    action: 'Resume Downloaded',
                   })
                 }
-                variant="contained"
+                variant='contained'
                 className={classes.button}
-                component={"a"}
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://drive.google.com/file/d/1DuWfX38E44ZJvLNhpw2ieaUW6o16_QNa/view?usp=sharing"
+                component={'a'}
+                rel='noopener noreferrer'
+                target='_blank'
+                href='https://drive.google.com/file/d/1DuWfX38E44ZJvLNhpw2ieaUW6o16_QNa/view?usp=sharing'
               >
                 <DownloadIcon />
-                <span style={{ marginLeft: "0.5em" }}>Download My Résumé</span>
+                <span style={{ marginLeft: '0.5em' }}>Download My Résumé</span>
               </Button>
             </Grid>
           </Grid>

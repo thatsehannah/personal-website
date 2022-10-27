@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import smoothScroll from "smoothscroll-polyfill";
+import React, { useState } from 'react';
+import smoothScroll from 'smoothscroll-polyfill';
 
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import AppBar from "@material-ui/core/AppBar";
-import Tooltip from "@material-ui/core/Tooltip";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Grid from "@material-ui/core/Grid";
-import LightModeIcon from "@material-ui/icons/Brightness4";
-import DarkModeIcon from "@material-ui/icons/Brightness7";
-import MenuIcon from "@material-ui/icons/Menu";
-import { useTheme } from "@material-ui/core/styles";
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import AppBar from '@material-ui/core/AppBar';
+import Tooltip from '@material-ui/core/Tooltip';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Grid from '@material-ui/core/Grid';
+import LightModeIcon from '@material-ui/icons/Brightness4';
+import DarkModeIcon from '@material-ui/icons/Brightness7';
+import MenuIcon from '@material-ui/icons/Menu';
+import { useTheme } from '@material-ui/core/styles';
 
-import { useStyles } from "./styles";
-import Menu from "./Menu/Menu";
+import { useStyles } from './styles';
+import Menu from './Menu/Menu';
 
 const ElevationScroll = (props) => {
   const { children } = props;
@@ -32,8 +32,8 @@ const ElevationScroll = (props) => {
 const Header = (props) => {
   const [openMenu, setOpenMenu] = useState(false);
   const theme = useTheme();
-  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
-  const matchesXL = useMediaQuery(theme.breakpoints.down("xl"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
+  const matchesXL = useMediaQuery(theme.breakpoints.down('xl'));
   const classes = useStyles();
 
   const toggleModeHandler = () => {
@@ -47,27 +47,27 @@ const Header = (props) => {
     const y =
       element.getBoundingClientRect().top + window.pageYOffset + yOffset;
     setTimeout(() => {
-      window.scrollTo({ top: y, behavior: "smooth" });
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }, 300);
   };
 
   const scrollToTop = () => {
     smoothScroll.polyfill();
     setTimeout(() => {
-      window.scroll({ top: 0, left: 0, behavior: "smooth" });
+      window.scroll({ top: 0, left: 0, behavior: 'smooth' });
     }, 300);
   };
 
   return (
     <>
       <ElevationScroll>
-        <AppBar position="fixed" className={classes.appBar}>
+        <AppBar position='fixed' className={classes.appBar}>
           <Toolbar disableGutters>
             <Grid
               container
-              direction="row"
-              alignItems="center"
-              justify="space-between"
+              direction='row'
+              alignItems='center'
+              justifyContent='space-between'
             >
               <Grid item>
                 <IconButton
@@ -80,14 +80,14 @@ const Header = (props) => {
                 </IconButton>
               </Grid>
               <Grid item>
-                <Tooltip title="Toggle light/dark mode">
+                <Tooltip title='Toggle light/dark mode'>
                   <IconButton
                     onClick={toggleModeHandler}
                     disableRipple
                     disableTouchRipple
                     className={classes.button}
                   >
-                    {theme.palette.type === "light" ? (
+                    {theme.palette.type === 'light' ? (
                       <LightModeIcon className={classes.appBarIcon} />
                     ) : (
                       <DarkModeIcon className={classes.appBarIcon} />
