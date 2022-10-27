@@ -30,12 +30,12 @@ const About = (props) => {
     <LazyLoad offset={150}>
       <Grid
         container
-        justify='center'
+        justifyContent='center'
         alignItems='center'
         className={classes.aboutSection}
       >
         <Grid item>
-          <Grid container justify='center'>
+          <Grid container justifyContent='center'>
             <Paper className={classes.paper}>
               <Grid container direction='column' alignItems='center'>
                 <Grid item>
@@ -54,7 +54,7 @@ const About = (props) => {
                     direction={matchesMD ? 'column' : 'row'}
                     justfiy={matchesMD ? 'center' : undefined}
                   >
-                    <Grid item container justify='center' lg={3}>
+                    <Grid item container justifyContent='center' lg={3}>
                       <FadeIn
                         render={(onload) => (
                           <Grid onLoad={onload} item>
@@ -71,7 +71,7 @@ const About = (props) => {
                     <Grid
                       item
                       container
-                      justify='center'
+                      justifyContent='center'
                       style={{ marginTop: matchesMD ? '2em' : undefined }}
                       lg
                     >
@@ -132,7 +132,7 @@ const About = (props) => {
                       item
                       container
                       alignItems='center'
-                      justify={matchesMD ? 'center' : undefined}
+                      justifyContent={matchesMD ? 'center' : undefined}
                       style={{ marginTop: matchesMD ? '2em' : undefined }}
                       lg={3}
                     >
@@ -141,7 +141,7 @@ const About = (props) => {
                           item
                           container
                           alignItems={matchesSM ? 'center' : undefined}
-                          justify='center'
+                          justifyContent='center'
                         >
                           <Grid item>
                             <Grid
@@ -235,7 +235,7 @@ const About = (props) => {
                         <Grid
                           item
                           container
-                          justify='center'
+                          justifyContent='center'
                           style={{ marginTop: '2em' }}
                         >
                           <Grid item>

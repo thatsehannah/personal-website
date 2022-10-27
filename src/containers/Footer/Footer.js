@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import { useTheme } from "@material-ui/core/styles";
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import { useTheme } from '@material-ui/core/styles';
 
-import { useStyles } from "./styles";
-import SocialMedia from "../SocialMedia/SocialMedia";
+import { useStyles } from './styles';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
 const Footer = () => {
   const classes = useStyles();
@@ -15,51 +15,51 @@ const Footer = () => {
     <footer className={classes.footer}>
       <Grid
         container
-        style={{ height: "100%", padding: "0 1em" }}
-        direction="column"
-        justify="center"
-        alignItems="center"
+        style={{ height: '100%', padding: '0 1em' }}
+        direction='column'
+        justifyContent='center'
+        alignItems='center'
       >
         <Grid item>
-          <Grid container direction="column">
+          <Grid container direction='column'>
             <Grid item>
-              <Typography align="center" className={classes.text} gutterBottom>
+              <Typography align='center' className={classes.text} gutterBottom>
                 "The moment you give up is the moment you let someone else win."
               </Typography>
               <Typography
-                align="center"
+                align='center'
                 className={classes.text}
-                style={{ textTransform: "uppercase" }}
+                style={{ textTransform: 'uppercase' }}
               >
                 Kobe Bryant
               </Typography>
             </Grid>
-            <Grid item style={{ margin: "1.5em 0" }}>
+            <Grid item style={{ margin: '1.5em 0' }}>
               <SocialMedia
-                location="Footer"
+                location='Footer'
                 size={[30, 23, 23]}
                 color={theme.palette.primary.main}
               />
             </Grid>
             <Grid item>
               <Typography
-                align="center"
+                align='center'
                 gutterBottom
                 className={classes.copyright}
               >
-                Built with ❤ by me using{" "}
+                Built with ❤ by me using{' '}
                 <a
                   className={classes.copyrightLink}
-                  target="_blank"
-                  href="https://reactjs.org"
+                  target='_blank'
+                  href='https://reactjs.org'
                 >
                   React JS
                 </a>
-                . Visit project{" "}
+                . Visit project{' '}
                 <a
                   className={classes.copyrightLink}
-                  target="_blank"
-                  href="https://github.com/thatsehannah/personal-website-nextjs"
+                  target='_blank'
+                  href='https://github.com/thatsehannah/personal-website-nextjs'
                 >
                   here
                 </a>
