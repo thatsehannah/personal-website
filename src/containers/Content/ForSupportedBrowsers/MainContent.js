@@ -36,9 +36,9 @@ const Supported = (props) => {
       <Grid item id='muses'>
         <Muses />
       </Grid>
-      {/* <Grid item id='contact'>
+      <Grid item id='contact'>
         <Contact />
-      </Grid> */}
+      </Grid>
       <Grid item>
         <Footer />
       </Grid>
