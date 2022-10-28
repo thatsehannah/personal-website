@@ -101,6 +101,7 @@ const Contact = (props) => {
       .catch((err) => {
         setLoading(false);
         clearFormItems();
+        console.log('Something went wrong: ', err);
         setSnackBar({
           open: true,
           message: 'Something went wrong :/.',
