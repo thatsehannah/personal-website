@@ -77,7 +77,7 @@ const Menu = (props) => {
                   Résumé
                 </ListItemText>
               </ListItem>
-              <ListItem
+              {/* <ListItem
                 button
                 className={classes.button}
                 onClick={() => {
@@ -88,7 +88,7 @@ const Menu = (props) => {
                 <ListItemText disableTypography className={classes.listItem}>
                   Projects
                 </ListItemText>
-              </ListItem>
+              </ListItem> */}
               <ListItem
                 button
                 className={classes.button}
