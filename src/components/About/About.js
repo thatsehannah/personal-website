@@ -161,7 +161,8 @@ const About = (props) => {
                                       variant='body2'
                                       className={classes.contactText}
                                     >
-                                      12/31/1993
+                                      December 31
+                                      <sup style={{ fontSize: '8pt' }}>st</sup>
                                     </Typography>
                                   </Grid>
                                 </Grid>
