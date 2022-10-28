@@ -53,7 +53,7 @@ const Footer = () => {
                   target='_blank'
                   href='https://reactjs.org'
                 >
-                  React JS
+                  NextJS
                 </a>
                 . Visit project{' '}
                 <a
