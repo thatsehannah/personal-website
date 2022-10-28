@@ -68,6 +68,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         mailTransport.sendMail(recipientEmailOptions).then(() => {
           console.log('Response email sent to: ', email);
         });
+        res.send('Message sent successfully!');
         return;
       });
     });

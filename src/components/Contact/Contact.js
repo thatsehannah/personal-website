@@ -93,7 +93,7 @@ const Contact = (props) => {
         clearFormItems();
         setSnackBar({
           open: true,
-          message: 'Message sent successfully!',
+          message: res.data,
           backgroundColor: '#4bb548',
         });
       })
