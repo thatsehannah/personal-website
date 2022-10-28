@@ -1,31 +1,31 @@
-import React from "react";
-import LazyLoad from "react-lazyload";
-import dynamic from "next/dynamic";
+import React from 'react';
+import LazyLoad from 'react-lazyload';
+import dynamic from 'next/dynamic';
 
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import { useStyles } from "./styles";
-import { education, work, skills } from "./resumeData";
+import { useStyles } from './styles';
+import { education, work, skills } from './resumeData';
 //import SkillBar from "react-skillbars";
 
-const DynamicSkillBarWithNoSSR = dynamic(() => import("react-skillbars"), {
+const DynamicSkillBarWithNoSSR = dynamic(() => import('react-skillbars'), {
   ssr: false,
 });
 
 const EducationSkills = (props) => {
   const theme = useTheme();
   const classes = useStyles();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   const skillbarColors = {
     bar: theme.palette.primary.main,
     title: {
-      text: "#fff",
-      background: "#c9c9c9",
+      text: '#fff',
+      background: '#c9c9c9',
     },
   };
 
@@ -34,20 +34,20 @@ const EducationSkills = (props) => {
       <Grid
         container
         className={classes.educationSkillsSection}
-        direction={matchesSM ? "column" : "row"}
+        direction={matchesSM ? 'column' : 'row'}
       >
         <Grid item>
-          <Grid container justify="center">
+          <Grid container justifyContent='center'>
             <Paper elevation={8} className={classes.paper}>
-              <Grid container direction="column">
+              <Grid container direction='column'>
                 <Grid item>
                   <Grid
                     container
-                    style={{ marginTop: "1em" }}
-                    direction={matchesSM ? "column" : "row"}
+                    style={{ marginTop: '1em' }}
+                    direction={matchesSM ? 'column' : 'row'}
                   >
                     <Grid item sm={matchesSM ? undefined : 4}>
-                      <Typography variant="h5">
+                      <Typography variant='h5'>
                         <span className={classes.title}>Education</span>
                       </Typography>
                     </Grid>
@@ -55,10 +55,10 @@ const EducationSkills = (props) => {
                       <Grid
                         item
                         container
-                        direction="column"
+                        direction='column'
                         style={{
-                          maxWidth: matchesSM ? undefined : "90%",
-                          marginTop: matchesSM ? "1em" : undefined,
+                          maxWidth: matchesSM ? undefined : '90%',
+                          marginTop: matchesSM ? '1em' : undefined,
                         }}
                       >
                         {education.map((school) => (
@@ -67,11 +67,11 @@ const EducationSkills = (props) => {
                               item
                               className={classes.item}
                               container
-                              direction="column"
+                              direction='column'
                             >
                               <Grid item>
                                 <Typography
-                                  variant="h6"
+                                  variant='h6'
                                   gutterBottom
                                   className={classes.header}
                                 >
@@ -80,7 +80,7 @@ const EducationSkills = (props) => {
                               </Grid>
                               <Grid item>
                                 <Typography
-                                  variant="subtitle2"
+                                  variant='subtitle2'
                                   gutterBottom
                                   className={classes.subtext}
                                 >
@@ -90,15 +90,15 @@ const EducationSkills = (props) => {
                                       color: theme.palette.primary.main,
                                     }}
                                   >
-                                    {" "}
-                                    |{" "}
+                                    {' '}
+                                    |{' '}
                                   </span>
                                   {school.date}
                                 </Typography>
                               </Grid>
                               <Grid item>
                                 <Typography
-                                  variant="body2"
+                                  variant='body2'
                                   gutterBottom
                                   className={classes.description}
                                 >
@@ -115,11 +115,11 @@ const EducationSkills = (props) => {
                 <Grid item>
                   <Grid
                     container
-                    style={{ marginTop: "2em" }}
-                    direction={matchesSM ? "column" : "row"}
+                    style={{ marginTop: '2em' }}
+                    direction={matchesSM ? 'column' : 'row'}
                   >
                     <Grid item sm={matchesSM ? undefined : 4}>
-                      <Typography variant="h5">
+                      <Typography variant='h5'>
                         <span className={classes.title}>Experience</span>
                       </Typography>
                     </Grid>
@@ -127,10 +127,10 @@ const EducationSkills = (props) => {
                       <Grid
                         item
                         container
-                        direction="column"
+                        direction='column'
                         style={{
-                          maxWidth: matchesSM ? undefined : "90%",
-                          marginTop: matchesSM ? "1em" : undefined,
+                          maxWidth: matchesSM ? undefined : '90%',
+                          marginTop: matchesSM ? '1em' : undefined,
                         }}
                       >
                         {work.map((job) => (
@@ -139,11 +139,11 @@ const EducationSkills = (props) => {
                               item
                               className={classes.item}
                               container
-                              direction="column"
+                              direction='column'
                             >
                               <Grid item>
                                 <Typography
-                                  variant="h6"
+                                  variant='h6'
                                   gutterBottom
                                   className={classes.header}
                                 >
@@ -152,7 +152,7 @@ const EducationSkills = (props) => {
                               </Grid>
                               <Grid item>
                                 <Typography
-                                  variant="subtitle2"
+                                  variant='subtitle2'
                                   gutterBottom
                                   className={classes.subtext}
                                 >
@@ -162,15 +162,15 @@ const EducationSkills = (props) => {
                                       color: theme.palette.primary.main,
                                     }}
                                   >
-                                    {" "}
-                                    |{" "}
+                                    {' '}
+                                    |{' '}
                                   </span>
                                   {job.date}
                                 </Typography>
                               </Grid>
                               <Grid item>
                                 <Typography
-                                  variant="body2"
+                                  variant='body2'
                                   gutterBottom
                                   className={classes.description}
                                 >
@@ -187,11 +187,11 @@ const EducationSkills = (props) => {
                 <Grid item>
                   <Grid
                     container
-                    style={{ marginTop: "2em" }}
-                    direction={matchesSM ? "column" : "row"}
+                    style={{ marginTop: '2em' }}
+                    direction={matchesSM ? 'column' : 'row'}
                   >
                     <Grid item sm={matchesSM ? undefined : 4}>
-                      <Typography variant="h5">
+                      <Typography variant='h5'>
                         <span className={classes.title}>Skills</span>
                       </Typography>
                     </Grid>
@@ -199,14 +199,17 @@ const EducationSkills = (props) => {
                       <Grid
                         item
                         container
-                        direction="column"
+                        direction='column'
                         style={{
-                          maxWidth: matchesSM ? undefined : "90%",
-                          marginTop: matchesSM ? "1em" : undefined,
+                          maxWidth: matchesSM ? undefined : '90%',
+                          marginTop: matchesSM ? '1em' : undefined,
                         }}
                       >
                         <Grid item>
-                          <DynamicSkillBarWithNoSSR skills={skills} colors={skillbarColors} />
+                          <DynamicSkillBarWithNoSSR
+                            skills={skills}
+                            colors={skillbarColors}
+                          />
                         </Grid>
                       </Grid>
                     </Grid>

@@ -1,67 +1,67 @@
-import React, { useState } from "react";
-import LazyLoad from "react-lazyload";
-import ReactGA from 'react-ga'
-import axios from "axios";
+import React, { useState } from 'react';
+import LazyLoad from 'react-lazyload';
+import ReactGA from 'react-ga';
+import axios from 'axios';
 
-import { useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import Hidden from "@material-ui/core/Hidden";
-import Button from "@material-ui/core/Button";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Snackbar from "@material-ui/core/Snackbar";
-import SendIcon from "@material-ui/icons/Send";
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import Hidden from '@material-ui/core/Hidden';
+import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Snackbar from '@material-ui/core/Snackbar';
+import SendIcon from '@material-ui/icons/Send';
 
-import { useStyles } from "./styles";
+import { useStyles } from './styles';
 
 const Contact = (props) => {
   const classes = useStyles(props);
   const theme = useTheme();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+  const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [emailValid, setEmailValid] = useState("");
-  const [phone, setPhone] = useState("");
-  const [phoneValid, setPhoneValid] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [emailValid, setEmailValid] = useState('');
+  const [phone, setPhone] = useState('');
+  const [phoneValid, setPhoneValid] = useState('');
+  const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [snackBar, setSnackBar] = useState({
     open: false,
-    message: "",
-    backgroundColor: "",
+    message: '',
+    backgroundColor: '',
   });
 
   const onBlur = (event) => {
     let valid;
 
     switch (event.target.id) {
-      case "email-field":
+      case 'email-field':
         valid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email);
 
         if (!valid) {
-          setEmailValid("Invalid email address");
+          setEmailValid('Invalid email address');
         } else {
-          setEmailValid("");
+          setEmailValid('');
         }
         break;
-      case "phone-field":
+      case 'phone-field':
         if (phone.length > 0) {
           valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
             phone
           );
 
           if (!valid) {
-            setPhoneValid("Invalid phone number");
+            setPhoneValid('Invalid phone number');
           } else {
-            setPhoneValid("");
+            setPhoneValid('');
           }
         } else {
-          setPhoneValid("");
+          setPhoneValid('');
         }
         break;
       default:
@@ -70,98 +70,106 @@ const Contact = (props) => {
   };
 
   const clearFormItems = () => {
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
+    setName('');
+    setEmail('');
+    setPhone('');
+    setMessage('');
   };
 
-  const onSendMessage = () => {
-    setLoading(true);
-    ReactGA.event({
-      category: 'Message',
-      action: "Message Sent"
-    })
+  const sendEmail = () => {
+    const formData = {
+      name: name.trimEnd(),
+      email: email.trimEnd(),
+      phone: phone ? phone.trimEnd() : 'No phone number provided.',
+      message: message.trimEnd(),
+    };
     axios
-      .get(
-        "https://us-central1-personal-website-ehannah.cloudfunctions.net/sendMail",
-        {
-          params: {
-            name: name.trimEnd(),
-            email: email.trimEnd(),
-            phone: phone ? phone.trimEnd() : "No phone number provided.",
-            message: message.trimEnd(),
-          },
-        }
+      .post(
+        'https://us-central1-thatsehannah.cloudfunctions.net/sendMail',
+        formData
       )
       .then((res) => {
         setLoading(false);
         clearFormItems();
         setSnackBar({
           open: true,
-          message: res.data,
-          backgroundColor: "#4bb548",
+          message: 'Message sent successfully!',
+          backgroundColor: '#4bb548',
         });
       })
       .catch((err) => {
         setLoading(false);
         clearFormItems();
+        console.log('Something went wrong: ', err);
         setSnackBar({
           open: true,
-          message: "Something went wrong, please try again!",
-          backgroundColor: "#ff3232",
+          message: 'Something went wrong, please try again!',
+          backgroundColor: '#ff3232',
         });
       });
   };
 
+  const onSendMessage = () => {
+    setLoading(true);
+    ReactGA.event({
+      category: 'Message',
+      action: 'Message Sent',
+    });
+    sendEmail();
+  };
+
   const sendButtonContent = (
     <>
-      <span style={{ marginRight: "0.5em" }}>Send Message</span>
+      <span style={{ marginRight: '0.5em' }}>Send Message</span>
       <SendIcon />
     </>
   );
 
   return (
     <LazyLoad offset={150}>
-      <Grid container justify="center" className={classes.contactSection}>
+      <Grid
+        container
+        justifyContent='center'
+        className={classes.contactSection}
+      >
         <Grid
           item
           xl={5}
           lg={5}
           style={{
-            marginTop: "1em",
-            marginBottom: matchesMD ? "2.5em" : undefined,
+            marginTop: '1em',
+            marginBottom: matchesMD ? '2.5em' : undefined,
           }}
         >
           <Grid
             container
-            direction="column"
-            alignItems="center"
-            style={{ width: matchesSM ? "100%" : "auto" }}
+            direction='column'
+            alignItems='center'
+            style={{ width: matchesSM ? '100%' : 'auto' }}
           >
-            <Grid item style={{ width: "90%" }}>
+            <Grid item style={{ width: '90%' }}>
               <Typography
-                align="center"
-                variant="h6"
+                align='center'
+                variant='h6'
                 gutterBottom
                 className={classes.statement}
               >
                 Want to say hey? Send me a message via email or this form if
-                you'd like to get in contact with me. I'd love to hear from you!{" "}
+                you'd like to get in contact with me. I'd love to hear from you!{' '}
               </Typography>
             </Grid>
             <Grid item>
-              <Grid item container style={{ marginTop: "1.3em" }}>
+              <Grid item container style={{ marginTop: '1.3em' }}>
                 <Grid item>
                   <MailOutlineIcon className={classes.mailIcon} />
                 </Grid>
                 <Grid item>
                   <Typography
-                    variant="body2"
-                    align="center"
-                    component={"a"}
-                    href="mailto:elliotchannah@outlook.com"
-                    target="_blank"
+                    variant='body2'
+                    align='center'
+                    component={'a'}
+                    href='mailto:elliotchannah@outlook.com'
+                    target='_blank'
                     className={classes.email}
                   >
                     elliotchannah@outlook.com
@@ -169,25 +177,25 @@ const Contact = (props) => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item style={{ width: "90%" }}>
+            <Grid item style={{ width: '90%' }}>
               <Grid
                 container
-                style={{ width: "100%", marginTop: "2em" }}
-                direction="column"
-                alignItems="center"
+                style={{ width: '100%', marginTop: '2em' }}
+                direction='column'
+                alignItems='center'
               >
-                <Grid container item justify="center">
+                <Grid container item justifyContent='center'>
                   <TextField
                     fullWidth={matchesSM}
                     className={classes.textField}
-                    label="Name*"
+                    label='Name*'
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     InputLabelProps={{
                       classes: {
                         root: classes.inputLabel,
-                        focused: "focused",
-                        shrink: "shrink",
+                        focused: 'focused',
+                        shrink: 'shrink',
                       },
                     }}
                     InputProps={{
@@ -196,16 +204,16 @@ const Contact = (props) => {
                         notchedOutline: classes.notchedOutline,
                       },
                     }}
-                    variant="outlined"
-                    id="name-field"
+                    variant='outlined'
+                    id='name-field'
                   />
                 </Grid>
-                <Grid container item justify="center">
+                <Grid container item justifyContent='center'>
                   <TextField
-                    id="email-field"
+                    id='email-field'
                     fullWidth={matchesSM}
                     className={classes.textField}
-                    label="Email*"
+                    label='Email*'
                     error={emailValid.length !== 0}
                     helperText={emailValid}
                     value={email}
@@ -215,8 +223,8 @@ const Contact = (props) => {
                       classes: {
                         root: classes.inputLabel,
                         error: classes.inputLabelError,
-                        focused: "focused",
-                        shrink: "shrink",
+                        focused: 'focused',
+                        shrink: 'shrink',
                       },
                     }}
                     InputProps={{
@@ -226,15 +234,15 @@ const Contact = (props) => {
                         error: classes.fieldsetError,
                       },
                     }}
-                    variant="outlined"
+                    variant='outlined'
                   />
                 </Grid>
-                <Grid container item justify="center">
+                <Grid container item justifyContent='center'>
                   <TextField
-                    id="phone-field"
+                    id='phone-field'
                     fullWidth={matchesSM}
                     className={classes.textField}
-                    label="Phone"
+                    label='Phone'
                     error={phoneValid.length !== 0}
                     helperText={phoneValid}
                     value={phone}
@@ -244,8 +252,8 @@ const Contact = (props) => {
                       classes: {
                         root: classes.inputLabel,
                         error: classes.inputLabelError,
-                        focused: "focused",
-                        shrink: "shrink",
+                        focused: 'focused',
+                        shrink: 'shrink',
                       },
                     }}
                     InputProps={{
@@ -255,26 +263,26 @@ const Contact = (props) => {
                         error: classes.fieldsetError,
                       },
                     }}
-                    variant="outlined"
+                    variant='outlined'
                   />
                 </Grid>
                 <Grid
                   container
                   item
-                  style={{ marginTop: "2.6em" }}
-                  justify="center"
+                  style={{ marginTop: '2.6em' }}
+                  justifyContent='center'
                 >
                   <TextField
                     fullWidth={matchesSM}
                     className={classes.textField}
-                    label="Message*"
+                    label='Message*'
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     InputLabelProps={{
                       classes: {
                         root: classes.inputLabel,
-                        focused: "focused",
-                        shrink: "shrink",
+                        focused: 'focused',
+                        shrink: 'shrink',
                       },
                     }}
                     InputProps={{
@@ -285,18 +293,18 @@ const Contact = (props) => {
                     }}
                     multiline
                     rows={12}
-                    variant="outlined"
-                    id="message-field"
+                    variant='outlined'
+                    id='message-field'
                   />
                 </Grid>
                 <Grid
                   item
                   container
-                  justify="center"
-                  style={{ marginBottom: "2em" }}
+                  justifyContent='center'
+                  style={{ marginBottom: '2em' }}
                 >
                   <Button
-                    variant="contained"
+                    variant='contained'
                     disabled={
                       name.length === 0 ||
                       email.length === 0 ||
@@ -329,7 +337,7 @@ const Contact = (props) => {
           ContentProps={{
             style: { backgroundColor: snackBar.backgroundColor },
           }}
-          anchorOrigin={{ vertical: "top", horizontal: "center" }}
+          anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
           onClose={() => setSnackBar({ ...snackBar, open: false })}
           autoHideDuration={4500}
         />

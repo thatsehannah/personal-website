@@ -28,7 +28,7 @@ const Landing = () => {
   return (
     <Grid
       container
-      justify='center'
+      justifyContent='center'
       alignItems='center'
       className={classes.landingSection}
     >
@@ -36,7 +36,7 @@ const Landing = () => {
         <Grid
           container
           alignItems='center'
-          justify={matchesSM ? 'center' : undefined}
+          justifyContent={matchesSM ? 'center' : undefined}
           direction='column'
           className={classes.intro}
         >
@@ -72,7 +72,7 @@ const Landing = () => {
             </Typography>
           </Grid>
           <Grid item>
-            <Grid container justify={matchesSM ? 'center' : undefined}>
+            <Grid container justifyContent={matchesSM ? 'center' : undefined}>
               <Button
                 onClick={() =>
                   ReactGA.event({

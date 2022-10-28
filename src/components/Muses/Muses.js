@@ -1,49 +1,50 @@
-import React from "react";
-import LazyLoad from "react-lazyload";
+import React from 'react';
+import LazyLoad from 'react-lazyload';
 
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { useTheme } from "@material-ui/core/styles";
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
-import { useStyles } from "./styles";
-import { muses } from "./musesData";
-import DesktopMuseCard from "./DesktopMuseCard/DesktopMuseCard";
-import MobileMuseCard from "./MobileMuseCard/MobileMuseCard";
+import { useStyles } from './styles';
+import { muses } from './musesData';
+import DesktopMuseCard from './DesktopMuseCard/DesktopMuseCard';
+import MobileMuseCard from './MobileMuseCard/MobileMuseCard';
 
 const Muses = (props) => {
   const classes = useStyles();
   const theme = useTheme();
-  const matchesMD = useMediaQuery(theme.breakpoints.down("md")); 
+  const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
 
-  const action = matchesMD ? "Tap" : "Hover over";
+  const action = matchesMD ? 'Tap' : 'Hover over';
 
   return (
     <LazyLoad offset={150}>
       <Grid container className={classes.musesSection}>
-        <Grid item container direction="column" className={classes.container}>
+        <Grid item container direction='column' className={classes.container}>
           <Grid item>
             <Typography
-              align="center"
-              variant="h1"
+              align='center'
+              variant='h1'
               gutterBottom
               className={classes.title}
             >
               MUSES
             </Typography>
           </Grid>
-          <Grid item style={{ marginBottom: "1em" }}>
+          <Grid item style={{ marginBottom: '1em' }}>
             <Typography
-              align="center"
-              variant="subtitle1"
+              align='center'
+              variant='subtitle1'
               gutterBottom
               className={classes.text}
             >
-              These are a few things that I find inspiration from on the daily. {action} the images below for a brief description.
+              These are a few things that I find inspiration from on the daily.{' '}
+              {action} the images below for a brief description.
             </Typography>
           </Grid>
           <Grid item>
-            <Grid container justify="center" alignItems="center">
+            <Grid container justifyContent='center' alignItems='center'>
               {muses.map((muse) => (
                 <Grid item key={muse.title}>
                   {matchesMD ? (

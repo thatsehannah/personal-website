@@ -12,7 +12,7 @@ const Projects = () => {
     <LazyLoad offset={150}>
       <Grid
         container
-        justify='center'
+        justifyContent='center'
         alignItems='center'
         className={classes.projectsSections}
       >
@@ -20,7 +20,13 @@ const Projects = () => {
           <Typography align='center' variant='h1' className={classes.title}>
             Personal Projects
           </Typography>
-          <Typography align='center' variant='body1' className={classes.comingSoon}>Coming Soon! 🚧 🚧 🚧 🚧</Typography>
+          <Typography
+            align='center'
+            variant='body1'
+            className={classes.comingSoon}
+          >
+            Coming Soon! 🚧 🚧 🚧 🚧
+          </Typography>
         </Grid>
       </Grid>
     </LazyLoad>
