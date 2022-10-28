@@ -64,7 +64,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
       };
 
       return mailTransport.sendMail(personalEmailOptions).then(() => {
-        console.log('New email sent to:', gmailEmail);
+        console.log('New email sent to echannah631@gmail.com');
         mailTransport.sendMail(recipientEmailOptions).then(() => {
           console.log('Response email sent to: ', email);
         });

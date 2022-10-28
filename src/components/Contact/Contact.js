@@ -76,13 +76,14 @@ const Contact = (props) => {
     setMessage('');
   };
 
-  const sendEmail = () => {
+  const sendEmails = () => {
     const formData = {
       name: name.trimEnd(),
       email: email.trimEnd(),
       phone: phone ? phone.trimEnd() : 'No phone number provided.',
       message: message.trimEnd(),
     };
+
     axios
       .post(
         'https://us-central1-thatsehannah.cloudfunctions.net/sendMail',
@@ -100,10 +101,9 @@ const Contact = (props) => {
       .catch((err) => {
         setLoading(false);
         clearFormItems();
-        console.log('Something went wrong: ', err);
         setSnackBar({
           open: true,
-          message: 'Something went wrong, please try again!',
+          message: 'Something went wrong :/.',
           backgroundColor: '#ff3232',
         });
       });
@@ -115,7 +115,7 @@ const Contact = (props) => {
       category: 'Message',
       action: 'Message Sent',
     });
-    sendEmail();
+    sendEmails();
   };
 
   const sendButtonContent = (
