@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import FadeIn from "react-lazyload-fadein";
+import React, { useState } from 'react';
+import FadeIn from 'react-lazyload-fadein';
 
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContent from '@material-ui/core/DialogContent';
+import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 
-import { useStyles } from "./styles";
-import { createSocialsIconItem } from "../../../utilities/createSocialsIconItem";
+import { useStyles } from './styles';
+import { createSocialsIconItem } from '../../../utilities/createSocialsIconItem';
 
 const MobileMuseCard = (props) => {
   const classes = useStyles();
@@ -32,7 +32,7 @@ const MobileMuseCard = (props) => {
           >
             <CardMedia
               className={classes.museImage}
-              component={"img"}
+              component={'img'}
               classes={{
                 root: classes.museImageResize,
               }}
@@ -44,12 +44,15 @@ const MobileMuseCard = (props) => {
       />
       <Dialog
         open={openDialog}
-        disableBackdropClick
-        onClose={() => setOpenDialog(false)}
+        onClose={(_, reason) => {
+          if (reason !== 'backdropClick') {
+            setOpenDialog(false);
+          }
+        }}
         PaperProps={{ classes: { root: classes.paper } }}
       >
         <DialogTitle disableTypography>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant='h6' className={classes.title}>
             {muse.title}
           </Typography>
           <IconButton
@@ -65,14 +68,14 @@ const MobileMuseCard = (props) => {
         <DialogContent className={classes.dialogContent}>
           <Grid
             container
-            direction="column"
-            alignItems="center"
-            style={{ margin: "1em 0" }}
+            direction='column'
+            alignItems='center'
+            style={{ margin: '1em 0' }}
           >
-            <Grid item style={{ width: "95%" }}>
+            <Grid item style={{ width: '95%' }}>
               <Typography
-                variant="body2"
-                align="center"
+                variant='body2'
+                align='center'
                 gutterBottom
                 className={classes.description}
               >

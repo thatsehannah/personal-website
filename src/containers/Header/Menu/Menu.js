@@ -15,12 +15,7 @@ const Menu = (props) => {
   const classes = useStyles();
 
   return (
-    <Modal
-      open={props.openMenu}
-      hideBackdrop
-      disableBackdropClick
-      className={classes.menu}
-    >
+    <Modal open={props.openMenu} hideBackdrop className={classes.menu}>
       <>
         <Grid container>
           <Grid item>
@@ -82,7 +77,7 @@ const Menu = (props) => {
                   Résumé
                 </ListItemText>
               </ListItem>
-              <ListItem
+              {/* <ListItem
                 button
                 className={classes.button}
                 onClick={() => {
@@ -93,7 +88,7 @@ const Menu = (props) => {
                 <ListItemText disableTypography className={classes.listItem}>
                   Projects
                 </ListItemText>
-              </ListItem>
+              </ListItem> */}
               <ListItem
                 button
                 className={classes.button}
