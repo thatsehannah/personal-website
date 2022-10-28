@@ -21,4 +21,3 @@ package-lock.json
 
 # Firebase
 .firebaserc
-firebase.json

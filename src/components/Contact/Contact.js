@@ -76,42 +76,46 @@ const Contact = (props) => {
     setMessage('');
   };
 
-  const onSendMessage = () => {
-    setLoading(true);
-    ReactGA.event({
-      category: 'Message',
-      action: 'Message Sent',
-    });
+  const sendEmail = () => {
+    const formData = {
+      name: name.trimEnd(),
+      email: email.trimEnd(),
+      phone: phone ? phone.trimEnd() : 'No phone number provided.',
+      message: message.trimEnd(),
+    };
     axios
-      .get(
-        'https://us-central1-personal-website-ehannah.cloudfunctions.net/sendMail',
-        {
-          params: {
-            name: name.trimEnd(),
-            email: email.trimEnd(),
-            phone: phone ? phone.trimEnd() : 'No phone number provided.',
-            message: message.trimEnd(),
-          },
-        }
+      .post(
+        'https://us-central1-thatsehannah.cloudfunctions.net/sendMail',
+        formData
       )
       .then((res) => {
         setLoading(false);
         clearFormItems();
         setSnackBar({
           open: true,
-          message: res.data,
+          message: 'Message sent successfully!',
           backgroundColor: '#4bb548',
         });
       })
       .catch((err) => {
         setLoading(false);
         clearFormItems();
+        console.log('Something went wrong: ', err);
         setSnackBar({
           open: true,
           message: 'Something went wrong, please try again!',
           backgroundColor: '#ff3232',
         });
       });
+  };
+
+  const onSendMessage = () => {
+    setLoading(true);
+    ReactGA.event({
+      category: 'Message',
+      action: 'Message Sent',
+    });
+    sendEmail();
   };
 
   const sendButtonContent = (
