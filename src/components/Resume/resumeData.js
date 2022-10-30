@@ -21,7 +21,7 @@ export const work = [
     subText: 'GoFundMe',
     date: 'April 2021 - October 2022',
     description:
-      "Onboarded teams to provision remote development environments using Kubernetes. Contributed to creating a central mock server that enabled developers to create mock APIs. Created a library that provided a third-party DORA metric platform with various CI/CD information from GFM's many services and applications. Enhanced GFM's CLI tool by adding several features to improve developer productivity.",
+      "Onboarded teams to provision remote development environments using Kubernetes. Constructed a library that provided a third-party DORA metric platform with various CI/CD information from GFM's many services and applications. Migrated my team's CI/CD pipelines from Jenkins to GitHub Actions. Enhanced GFM's CLI tool by adding several features to improve developer productivity.",
   },
   {
     header: 'MLS Programmer',
