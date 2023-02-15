@@ -10,10 +10,10 @@ export const useStyles = makeStyles((theme) => ({
       height: "8em",
     },
     [theme.breakpoints.down('lg')]: {
-      height: '26em',
-      width: '26em',
+      height: '28em',
+      width: '28em',
       "&:hover $museImage": {
-        height: "6em",
+        height: "7em",
       },
     }
   },
@@ -32,7 +32,7 @@ export const useStyles = makeStyles((theme) => ({
     objectPosition: "50% 5%",
   },
   museImage: {
-    height: "32em",
+    height: "28em",
     transition: "all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
   },
   museDescriptionContainer: {
