@@ -23,11 +23,4 @@ export const useStyles = makeStyles((theme) => ({
       backgroundColor: "transparent",
     },
   },
-  copyrightLink: {
-    color: "#696969",
-    textDecoration: "none",
-    "&:hover": {
-      textDecoration: "underline",
-    },
-  },
 }));

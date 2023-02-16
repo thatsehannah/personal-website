@@ -17,7 +17,7 @@ export const muses = [
     fadeInDuration: 600,
   },
   {
-    title: 'Sneaker Reselling',
+    title: 'Kix N Play',
     pic: {
       url: '/assets/images/kixnplay.jpeg',
       title: 'Kix N Play logo',
@@ -34,13 +34,13 @@ export const muses = [
     fadeInDuration: 700,
   },
   {
-    title: 'Unapologetically Black',
+    title: 'Black & Proud',
     pic: {
       url: '/assets/images/blm.jpeg',
       title: 'Black lives matter protest sign',
     },
     description:
-      "I am an influential, innovative, resilient, powerful, and - most of all - fearless Black man. Being Black is beautiful, yet it's a shame that we still have to endure blatant racial injustices, profiling, marginalization, and oppression (just to name a few) from those who see us as 'inferior'. Nonetheless, I am PROUD to be Black and always will be ✊🏾.",
+      "I am an influential, innovative, resilient, powerful, unapologetic and - above all - fearless Black man. Being Black is beautiful, yet it's a shame that we still have to endure blatant racial injustices, profiling, marginalization, and oppression (just to name a few) from those who see us as 'inferior'. Nonetheless, I am PROUD to be Black and always will be ✊🏾.",
     fadeInDuration: 800,
   },
   {

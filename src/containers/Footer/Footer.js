@@ -47,15 +47,7 @@ const Footer = () => {
                 gutterBottom
                 className={classes.copyright}
               >
-                Built with ❤ by me using{' '}
-                <a
-                  className={classes.copyrightLink}
-                  target='_blank'
-                  href='https://reactjs.org'
-                >
-                  NextJS
-                </a>
-                . Visit project{' '}
+                &copy; 2020 - {new Date().getFullYear()}, Made with ❤ by Elliot Hannah. Visit this project{' '}
                 <a
                   className={classes.copyrightLink}
                   target='_blank'
