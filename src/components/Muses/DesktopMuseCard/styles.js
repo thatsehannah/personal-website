@@ -10,8 +10,8 @@ export const useStyles = makeStyles((theme) => ({
       height: "8em",
     },
     [theme.breakpoints.down('lg')]: {
-      height: '28em',
-      width: '28em',
+      height: '24em',
+      width: '24em',
       "&:hover $museImage": {
         height: "7em",
       },
@@ -32,7 +32,8 @@ export const useStyles = makeStyles((theme) => ({
     objectPosition: "50% 5%",
   },
   museImage: {
-    height: "28em",
+    height: "100%",
+    width: "100%",
     transition: "all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)",
   },
   museDescriptionContainer: {
@@ -57,10 +58,23 @@ export const useStyles = makeStyles((theme) => ({
       width: '1.4em'
     }
   },
+  museTitleGrid: {
+    margin: "1em 0",
+    [theme.breakpoints.down('lg')]: {
+      margin: "0.6em 0"
+    }
+  },
+  museTitleText: {
+    color: theme.palette.type === "light" ? "#000" : "#fff",
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.25rem'
+    }
+  },
   museText: {
     color: theme.palette.type === "light" ? "#000" : "#fff",
+    lineHeight: 1.5,
     [theme.breakpoints.down('lg')]:{
-      fontSize: '1em'
+      fontSize: '0.95rem',
     }
   },
 }));

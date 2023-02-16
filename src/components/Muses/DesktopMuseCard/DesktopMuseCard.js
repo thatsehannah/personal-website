@@ -36,11 +36,11 @@ const MuseCard = (props) => {
               alignItems="center"
               className={classes.museDescriptionContainer}
             >
-              <Grid item>
+              <Grid item className={classes.museTitleGrid}>
                 <Typography
                   align="center"
-                  variant="h6"
-                  className={classes.museText}
+                  variant="h5"
+                  className={classes.museTitleText}
                 >
                   {muse.title}
                 </Typography>

@@ -52,7 +52,7 @@ const MobileMuseCard = (props) => {
         PaperProps={{ classes: { root: classes.paper } }}
       >
         <DialogTitle disableTypography>
-          <Typography variant='h6' className={classes.title}>
+          <Typography variant='h5' className={classes.title}>
             {muse.title}
           </Typography>
           <IconButton

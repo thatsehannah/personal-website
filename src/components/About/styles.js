@@ -23,7 +23,6 @@ export const useStyles = makeStyles((theme) => ({
     padding: "2em",
     marginTop: "1em",
     marginBottom: "1em",
-    borderRadius: "1em",
     backgroundColor:
       theme.palette.type === "light" ? "#fff" : theme.palette.secondary.dark,
     [theme.breakpoints.down("lg")]: {

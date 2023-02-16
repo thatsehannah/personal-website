@@ -56,6 +56,7 @@ export const useStyles = makeStyles((theme) => ({
   description: {
     color: theme.palette.type === "light" ? "#000" : "#fff",
     fontSize: "1.1em",
+    lineHeight: 1.6,
   },
   title: {
     color: theme.palette.type === "light" ? "#000" : "#fff",

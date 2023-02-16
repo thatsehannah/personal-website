@@ -36,12 +36,10 @@ const theme = createTheme({
     h5: {
       fontFamily: 'Archivo Black',
       textTransform: 'uppercase',
-      fontSize: '1.5em',
     },
     h6: {
       fontFamily: 'Rubik',
       fontWeight: 700,
-      fontSize: '1.3em',
     },
     subtitle1: {
       fontFamily: 'Rubik',
