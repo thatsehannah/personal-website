@@ -1,4 +1,3 @@
-import { SiSoundcloud } from 'react-icons/si';
 import { SiInstagram } from 'react-icons/si';
 
 export const muses = [
@@ -51,27 +50,10 @@ export const muses = [
     fadeInDuration: 900,
   },
   {
-    title: 'Music',
-    pic: {
-      url: '/assets/images/music.jpeg',
-      title: 'Elliot holding a keyboard',
-    },
-    description:
-      'Beat making has been a pasttime of mine for over 10 years now. I particularly love chopping up samples of older music and adding a new twist to it. Check out my Soundcloud to here some of my creations.',
-    socialMedia: {
-      icon: SiSoundcloud,
-      title: 'Muse Music',
-      type: 'Soundcloud',
-      tooltip: 'My Soundcloud page',
-      link: 'https://soundcloud.com/thatsehannah/tracks',
-    },
-    fadeInDuration: 1000,
-  },
-  {
     title: 'Basketball',
     pic: { url: '/assets/images/kobemjbron.jpeg', title: 'Kobe, MJ, Bron' },
     description:
-      "Basketball was my first love. I enjoy watching it as well as playing it. It taught me discipline and gave me confidence to strive to be the best at any and everything I do. Well since you asked, my top 5 favorite players of all-time are LeBron James, Michael Jordan, Allen Iverson, Shaq, and the late-great Kobe Bryant. Rest in peace Kobe & Gianna. Mamba Forever.",
+      'Basketball was my first love. I enjoy watching it as well as playing it. It taught me discipline and gave me confidence to strive to be the best at any and everything I do. Well since you asked, my top 5 favorite players of all-time are LeBron James, Michael Jordan, Allen Iverson, Shaq, and the late-great Kobe Bryant. Rest in peace Kobe & Gianna. Mamba Forever.',
     fadeInDuration: 1100,
   },
   {
@@ -81,7 +63,7 @@ export const muses = [
       title: 'Workstation with code on computer',
     },
     description:
-      "Two of the biggest reasons why I am passionate about technology is because of the ever-evolving capabilities of technology and the reward of producing quality products. This passion solely drove me to learn how to code and want to continue to be hands-on with the growing world of tech.",
+      'Two of the biggest reasons why I am passionate about technology is because of the ever-evolving capabilities of technology and the reward of producing quality products. This passion solely drove me to learn how to code and want to continue to be hands-on with the growing world of tech.',
     fadeInDuration: 1200,
   },
   {

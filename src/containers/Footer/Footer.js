@@ -47,11 +47,12 @@ const Footer = () => {
                 gutterBottom
                 className={classes.copyright}
               >
-                &copy; 2020 - {new Date().getFullYear()}, Made with ❤ by Elliot Hannah. Visit this project{' '}
+                &copy; 2020 - {new Date().getFullYear()}, Made with ❤ by Elliot
+                Hannah. Visit this project{' '}
                 <a
                   className={classes.copyrightLink}
                   target='_blank'
-                  href='https://github.com/thatsehannah/personal-website-nextjs'
+                  href='https://github.com/thatsehannah/personal-website'
                 >
                   here
                 </a>
