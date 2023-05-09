@@ -54,15 +54,15 @@ export const work = [
 ];
 
 export const skills = [
-  { type: 'iOS/Android', level: 60 },
-  { type: 'ReactJS', level: 95 },
+  { type: 'iOS/Android', level: 90 },
+  { type: 'ReactJS', level: 90 },
   { type: 'JavaScript', level: 85 },
   { type: 'C#/.NET', level: 90 },
-  { type: 'Bash', level: 70 },
+  { type: 'Bash', level: 75 },
   { type: 'Docker/K8s', level: 85 },
   { type: 'SQL', level: 60 },
   { type: 'Java', level: 75 },
   { type: 'HTML5/CSS', level: 85 },
-  { type: 'Golang', level: 65 },
+  { type: 'Golang', level: 80 },
   { type: 'Jenkins', level: 70 },
 ];

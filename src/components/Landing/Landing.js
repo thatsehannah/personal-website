@@ -67,8 +67,9 @@ const Landing = () => {
               gutterBottom
               className={classes.statement}
             >
-              Full Stack Developer <span className={classes.bulletPt}>•</span>{' '}
-              Beat Maker <span className={classes.bulletPt}>•</span> Sneakerhead
+              Full Stack/iOS Developer{' '}
+              <span className={classes.bulletPt}>•</span> Beat Maker{' '}
+              <span className={classes.bulletPt}>•</span> Sneakerhead
             </Typography>
           </Grid>
           <Grid item>
